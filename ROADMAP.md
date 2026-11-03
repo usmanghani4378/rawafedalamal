@@ -1,13 +1,13 @@
-# 🌐 Development Roadmap — Rawafed Al Amal (Scrap & Waste Metal Trading, Dubai)
+# 🌐 Development Roadmap — Rawafed Alamal (Scrap & Metal Waste Trading L.L.C, Dubai)
 
-> **Status:** Planning v1 · **Date:** Nov 2026 · **Owner:** Rawafed Al Amal + Dev
-> This document is the master plan. Implementation starts after the open questions at the bottom are answered.
+> **Status:** Planning v2 · **Date:** Nov 2026 · **Owner:** Rawafed Alamal + Dev
+> Company legal details are now **verified from the EJARI certificate** — see [`docs/company-profile.md`](docs/company-profile.md).
 
 ---
 
 ## 1. Purpose & Business Goals
 
-**Company:** Rawafed Al Amal — a **licensed scrap & waste metal trading company in Dubai, UAE** (DED commercial licence + Dubai Municipality waste-trading permit, activity code **4669.75** — to be confirmed).
+**Company:** **RAWAFED ALAMAL SCRAP & METAL WASTE TRADING L.L.C (S.O.C)** — licensed scrap & metal waste trading company in Dubai, UAE. DED trade licence **No. 1731345** (verified from EJARI certificate; Dubai Municipality waste-trading permit expected under activity code **4669.75** — to be confirmed). Office: Al Khabeesi Building, Office 6, Al Khabeesi, Deira, Dubai. Owner: Hind Abdulghaffar Ghuloom Husain.
 
 **Why the website exists (in priority order):**
 
@@ -187,11 +187,12 @@ Home
 
 ## 10. Content Checklist (what the client must provide)
 
-- [ ] Exact legal company name (as on licence) + licence/permit numbers to display
-- [ ] Logo files (or approve AI-drafted logo)
-- [ ] Yard/office address + Google Maps pin
-- [ ] Phone numbers, WhatsApp number, email
+- [x] Exact legal company name (as on licence) + licence/permit numbers to display — **verified: DED licence 1731345**
+- [x] Yard/office address — **Al Khabeesi Bldg, Office 6, Al Khabeesi, Deira, Dubai** (Maps pin pending)
+- [x] Email — biz.management360@gmail.com
+- [ ] WhatsApp / mobile number
 - [ ] Working hours
+- [ ] Logo files (or approve AI-drafted logo)
 - [ ] Materials bought + any rate guidance (or "call for rate")
 - [ ] Real photos: yard, fleet, crew, collections, loaded containers, client sites (with permission)
 - [ ] Service list confirmation (do they do demolition support? export?)
@@ -210,9 +211,17 @@ Home
 
 ---
 
-## 12. Open Questions (blocking decisions)
+## 12. Decisions & Open Questions
 
-1. **Legal name & licence details** — exact registered name (e.g. "Rawafed Al Amal Scrap Trading LLC")?
-2. **Languages** — English only, or English + Arabic (RTL)?
-3. **Tech stack** — approve Next.js + Tailwind (Option A)?
-4. **Content readiness** — does the client have logo/photos/data, or do we start with placeholders + AI imagery?
+### ✅ Resolved (Nov 2026)
+1. **Legal name & licence** — verified from EJARI certificate: `RAWAFED ALAMAL SCRAP & METAL WASTE TRADING L.L.C (S.O.C)`, DED licence **1731345**, office in Al Khabeesi, Deira. → [`docs/company-profile.md`](docs/company-profile.md)
+2. **Languages** — *(default)* English first; build RTL-ready so Arabic can be added in Phase 6 without rework.
+3. **Tech stack** — *(default)* Next.js + Tailwind CSS (Option A).
+4. **Content** — *(default)* AI-drafted logo + AI/stock placeholder imagery, swapped for real photos as the client supplies them.
+
+### ⚠️ Still blocking launch content
+1. **WhatsApp / mobile number** — the primary CTA needs it (landline 04 331 1111 is on the certificate).
+2. **Working hours** for Contact page & Google Business Profile.
+3. **Activity list on the licence** — exact wording for Services (buying only? collection? export?) and whether the Dubai Municipality waste permit number can be displayed.
+4. **Domain** — `rawafedalamal.ae` / `.com`.
+5. **Google Maps pin** — office (Al Khabeesi) and/or yard location.
