@@ -5,6 +5,7 @@ import {
   ArrowRight,
   BadgeCheck,
   CheckCircle2,
+  ChevronDown,
   MapPin,
   Phone,
   Quote,
@@ -14,6 +15,7 @@ import {
 import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
 import GalleryGrid from "@/components/GalleryGrid";
+import MaterialsMarquee from "@/components/MaterialsMarquee";
 import Reveal from "@/components/Reveal";
 import { Icon } from "@/components/icons";
 import { site } from "@/data/site";
@@ -24,60 +26,72 @@ import { steps, reasons, gallery, testimonials } from "@/data/content";
 export default function HomePage() {
   return (
     <>
-      {/* ═══════════ 1) HERO — company name, centred. No fluff. ═══════════ */}
-      <section className="relative flex min-h-[78vh] items-center justify-center md:min-h-[92vh]">
+      {/* ═══════════ 1) HERO — bright wallpaper, centred glass panel ═══════════ */}
+      <section className="relative flex min-h-[82vh] items-center justify-center md:min-h-[94vh]">
         <Image
           src={site.images.hero}
           alt="Rawafed Alamal scrap metal yard in Dubai"
           fill
           priority
-          className="object-cover"
+          className="hero-zoom object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/75 via-navy/80 to-navy/95" />
-        <div className="relative mx-auto w-full max-w-4xl px-4 py-20 text-center sm:px-6 md:py-24">
-          <p className="fade-up kicker kicker--center justify-center">
-            {site.brand.tagline}
-          </p>
-          <h1
-            className="fade-up fade-up-1 heading-xl mt-5 text-white"
-            style={{ fontSize: "clamp(3rem, 9vw, 6.5rem)" }}
-          >
-            {site.brand.name}
-          </h1>
-          <p
-            lang="ar"
-            className="ar fade-up fade-up-2 mt-3 text-lg font-bold text-white/95 sm:text-xl"
-          >
-            {ar.brand.legalName}
-          </p>
-          <div className="fade-up fade-up-2 mt-9 flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn btn-primary">
-              Get a Free Quote <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light">
-              <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
-            </a>
-          </div>
-          <div className="fade-up fade-up-3 mt-8 flex flex-wrap justify-center gap-2.5">
-            <span className="chip">
-              <BadgeCheck className="h-4 w-4 text-gray-300" />DED Licence{" "}
-              {site.license.number}
-            </span>
-            <span className="chip">
-              <ShieldCheck className="h-4 w-4 text-gray-300" />
-              Municipality Compliant
-            </span>
-            <span className="chip">
-              <MapPin className="h-4 w-4 text-gray-300" />
-              Pickup Across Dubai
-            </span>
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/35 via-navy/30 to-navy/85" />
+        <div className="relative mx-auto w-full max-w-4xl px-4 py-16 text-center sm:px-6 md:py-20">
+          <div className="fade-up rounded-3xl bg-navy/50 px-5 py-10 ring-1 ring-white/15 backdrop-blur-md sm:px-10 sm:py-12">
+            <p className="kicker kicker--center justify-center">
+              {site.brand.tagline}
+            </p>
+            <h1
+              className="heading-xl mt-5 text-white"
+              style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
+            >
+              {site.brand.name}
+            </h1>
+            <p
+              lang="ar"
+              className="ar mt-3 text-base font-bold text-white/95 sm:text-xl"
+            >
+              {ar.brand.legalName}
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link href="/contact" className="btn btn-primary">
+                Get a Free Quote <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light">
+                <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
+              </a>
+            </div>
+            <div className="mt-7 flex flex-wrap justify-center gap-2.5">
+              <span className="chip">
+                <BadgeCheck className="h-4 w-4 text-gray-300" />DED Licence{" "}
+                {site.license.number}
+              </span>
+              <span className="chip">
+                <ShieldCheck className="h-4 w-4 text-gray-300" />
+                Municipality Compliant
+              </span>
+              <span className="chip">
+                <MapPin className="h-4 w-4 text-gray-300" />
+                Pickup Across Dubai
+              </span>
+            </div>
           </div>
         </div>
+        <a
+          href="#stats"
+          aria-label="Scroll down"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/75 transition-colors hover:text-white"
+        >
+          <ChevronDown className="h-7 w-7 animate-bounce" />
+        </a>
       </section>
 
+      {/* ═══════════ 1.5) MATERIALS MARQUEE ═══════════ */}
+      <MaterialsMarquee />
+
       {/* ═══════════ 2) TRUST / STATS BAND ═══════════ */}
-      <section className="border-y border-line bg-navy">
+      <section id="stats" className="scroll-mt-24 border-b border-line bg-navy">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 gap-y-6 px-4 py-9 sm:px-6 lg:grid-cols-4">
           {site.stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 90}>
@@ -115,10 +129,10 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 90}>
-                <Link href={`/services/${s.slug}`} className="card group block p-6">
+                <Link href={`/services/${s.slug}`} className="card group block p-5 sm:p-6">
                   <span className="icon-box">
                     <Icon name={s.icon} className="h-6 w-6" />
                   </span>
@@ -134,7 +148,7 @@ export default function HomePage() {
             ))}
             {/* CTA card */}
             <Reveal delay={180}>
-              <div className="card flex h-full flex-col justify-between bg-navy p-6">
+              <div className="card flex h-full flex-col justify-between bg-navy p-5 sm:p-6">
                 <div>
                   <span className="icon-box icon-box--solid">
                     <Phone className="h-6 w-6" />
@@ -155,7 +169,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 4) MATERIALS PREVIEW ═══════════ */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             center
@@ -164,10 +178,10 @@ export default function HomePage() {
             titleAr={ar.sections.materials}
             intro="We purchase the full range of ferrous and non-ferrous metals — sorted or mixed, any quantity."
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 sm:mt-12 grid gap-6 lg:grid-cols-3">
             {materialCategories.map((cat, i) => (
               <Reveal key={cat.id} delay={i * 100}>
-                <div className="card h-full p-7">
+                <div className="card card-accent-eco h-full p-5 sm:p-7">
                   <div className="flex items-center gap-3.5">
                     <span className="icon-box">
                       <Icon name={cat.icon} className="h-6 w-6" />
@@ -211,7 +225,7 @@ export default function HomePage() {
             title="Scrap Gone in 4 Simple Steps"
             titleAr={ar.sections.how}
           />
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 sm:mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <Reveal key={step.title} delay={i * 110}>
                 <div className="relative">
@@ -244,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 6) WHY CHOOSE US (dark) ═══════════ */}
-      <section className="bg-navy py-20">
+      <section className="bg-navy py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             center
@@ -254,10 +268,10 @@ export default function HomePage() {
             titleAr={ar.sections.why}
             intro="Anyone with a pickup truck can offer to buy your metal. Here's what you get with a registered Dubai trading company."
           />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 sm:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reasons.map((r, i) => (
               <Reveal key={r.title} delay={(i % 3) * 90}>
-                <div className="card-dark h-full p-7">
+                <div className="card-dark h-full p-5 sm:p-7">
                   <span className="icon-box">
                     <Icon name={r.icon} className="h-6 w-6" />
                   </span>
@@ -271,8 +285,8 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 7) ABOUT TEASER ═══════════ */}
-      <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 lg:gap-12 sm:px-6 lg:grid-cols-2">
           <Reveal className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
@@ -283,7 +297,7 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-6 right-4 rounded-xl bg-navy px-6 py-5 shadow-xl sm:right-6">
+            <div className="absolute -bottom-6 right-4 rounded-xl bg-navy px-5 py-4 sm:px-6 sm:py-5 shadow-xl sm:right-6">
               <p className="font-display text-2xl font-bold uppercase leading-none text-white">
                 Dubai
               </p>
@@ -352,12 +366,12 @@ export default function HomePage() {
 
       {/* ═══════════ 9) TESTIMONIALS (renders only when added in content.ts) ═══════════ */}
       {testimonials.length > 0 && (
-        <section className="bg-white py-20">
+        <section className="bg-white py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <SectionHeading center kicker="Testimonials" title="What Our Clients Say" />
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="mt-8 sm:mt-12 grid gap-6 md:grid-cols-3">
               {testimonials.map((t) => (
-                <figure key={t.name} className="card p-7">
+                <figure key={t.name} className="card p-4 sm:p-6">
                   <Quote className="h-7 w-7 text-navy" />
                   <blockquote className="mt-4 text-sm leading-relaxed text-ink">
                     {t.text}

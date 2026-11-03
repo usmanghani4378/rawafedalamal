@@ -19,7 +19,7 @@ export default function AboutPage() {
       <section className="relative">
         <Image src={site.images.about} alt="" fill className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-navy/85" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">About Us · <span lang="ar" className="ar-inline">من نحن</span></span>
           <h1 className="heading-xl mt-3 text-white">The Company Behind the Trucks</h1>
           <p className="mt-4 max-w-2xl text-gray-300">
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
       {/* story */}
       <section className="py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 lg:gap-12 sm:px-6 lg:grid-cols-2">
           <div>
             <SectionHeading
               kicker="Our Story"
@@ -75,11 +75,11 @@ export default function AboutPage() {
       </section>
 
       {/* vision / mission / values */}
-      <section className="bg-navy py-20">
+      <section className="bg-navy py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading center dark kicker="What Drives Us" title="Vision, Mission & Values" />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <div className="card-dark p-7">
+          <div className="mt-10 sm:mt-14 grid gap-6 md:grid-cols-3">
+            <div className="card-dark p-5 sm:p-7">
               <span className="icon-box"><Eye className="h-6 w-6" /></span>
               <h3 className="heading-sm mt-5 text-white">Our Vision</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 first name contractors and residents think of when metal needs to move.
               </p>
             </div>
-            <div className="card-dark p-7">
+            <div className="card-dark p-5 sm:p-7">
               <span className="icon-box"><HeartHandshake className="h-6 w-6" /></span>
               <h3 className="heading-sm mt-5 text-white">Our Mission</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 payment, full compliance — for every customer, at every quantity.
               </p>
             </div>
-            <div className="card-dark p-7">
+            <div className="card-dark p-5 sm:p-7">
               <span className="icon-box"><Leaf className="h-6 w-6" /></span>
               <h3 className="heading-sm mt-5 text-white">Our Values</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
@@ -110,7 +110,7 @@ export default function AboutPage() {
       {/* compliance strip */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="card grid items-center gap-8 p-8 sm:p-10 lg:grid-cols-[auto_1fr_auto]">
+          <div className="card grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[auto_1fr_auto]">
             <span className="icon-box icon-box--solid h-16 w-16 !rounded-2xl">
               <ShieldCheck className="h-8 w-8" />
             </span>
@@ -143,7 +143,7 @@ export default function AboutPage() {
       </section>
 
       {/* HSE */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             center
@@ -151,7 +151,7 @@ export default function AboutPage() {
             title="Health, Safety & Environment"
             intro="Scrap is heavy, sharp and industrial. We run our yard and collections so that our team, our customers and the city stay safe."
           />
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
+          <div className="mx-auto mt-8 sm:mt-12 grid max-w-4xl gap-6 sm:grid-cols-3">
             {[
               {
                 title: "Safety First",
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 text: "Everything we buy is routed to recycling — keeping metal waste out of Dubai's landfill.",
               },
             ].map((item) => (
-              <div key={item.title} className="card p-6 text-center">
+              <div key={item.title} className="card p-4 sm:p-6 text-center">
                 <h3 className="heading-sm text-navy">{item.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{item.text}</p>
               </div>

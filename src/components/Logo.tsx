@@ -13,7 +13,7 @@ export default function Logo({ dark = false }: { dark?: boolean }) {
         width={44}
         height={44}
         priority
-        className="h-10 w-10 object-contain sm:h-11 sm:w-11"
+        className="h-9 w-9 object-contain sm:h-11 sm:w-11"
       />
       <span className="leading-none">
         <span className="flex items-baseline gap-2">

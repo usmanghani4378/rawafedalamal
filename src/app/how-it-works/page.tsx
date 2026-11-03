@@ -25,7 +25,7 @@ export default function HowItWorksPage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">How It Works · <span lang="ar" className="ar-inline">كيف نعمل</span></span>
           <h1 className="heading-xl mt-3 text-white">
             From Call to Cash in <span className="text-royal">4 Steps</span>
@@ -59,7 +59,7 @@ export default function HowItWorksPage() {
           </div>
 
           {/* transparency promise */}
-          <div className="mt-14 grid gap-6 rounded-2xl bg-navy p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center">
+          <div className="mt-10 sm:mt-14 grid gap-6 rounded-2xl bg-navy p-6 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center">
             <span className="icon-box icon-box--solid mx-auto h-16 w-16 !rounded-2xl">
               <CheckCircle2 className="h-8 w-8" />
             </span>
@@ -77,7 +77,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* prep tips */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             center
@@ -100,7 +100,7 @@ export default function HowItWorksPage() {
       <section className="py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <SectionHeading center kicker="FAQ" title="Frequently Asked Questions" />
-          <div className="faq card mt-12 px-7 py-2">
+          <div className="faq card mt-8 sm:mt-12 px-5 sm:px-7 py-2">
             {faqs.map((f) => (
               <details key={f.q}>
                 <summary className="text-ink">{f.q}</summary>

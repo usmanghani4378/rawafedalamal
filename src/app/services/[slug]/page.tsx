@@ -40,7 +40,7 @@ export default async function ServiceDetailPage({
       <section className="relative">
         <Image src={service.image} alt="" fill className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-navy/85" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="icon-box icon-box--solid">
             <Icon name={service.icon} className="h-6 w-6" />
           </span>
@@ -50,7 +50,7 @@ export default async function ServiceDetailPage({
       </section>
 
       <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_380px]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 lg:gap-12 sm:px-6 lg:grid-cols-[1fr_380px]">
           {/* main */}
           <div>
             <Link

@@ -52,7 +52,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="card p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="card p-4 sm:p-6 sm:p-8">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="qf-name" className="label">
