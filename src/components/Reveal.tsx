@@ -42,7 +42,9 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
+      className={["reveal", visible ? "is-visible" : "", className]
+        .filter(Boolean)
+        .join(" ")}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
