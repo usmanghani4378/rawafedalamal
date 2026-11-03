@@ -46,11 +46,11 @@ export default function HomePage() {
               {site.brand.tagline}
             </p>
             <h1
-              className="heading-xl mt-5 text-white drop-shadow-[0_4px_24px_rgba(10,28,54,0.65)]"
+              className="heading-xl mt-5 text-white"
               style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
             >
               {site.brand.name.split(" ")[0]}{" "}
-              <span className="text-royal drop-shadow-[0_4px_24px_rgba(10,28,54,0.65)]">
+              <span className="text-white">
                 {site.brand.name.split(" ").slice(1).join(" ")}
               </span>
             </h1>
@@ -137,7 +137,7 @@ export default function HomePage() {
 
           <div className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 90} className="h-full">
+              <Reveal key={s.slug} delay={(i % 3) * 70} className="h-full">
                 <Link
                   href={`/services/${s.slug}`}
                   className="card group flex h-full flex-col p-5 sm:p-6"
@@ -156,7 +156,7 @@ export default function HomePage() {
               </Reveal>
             ))}
             {/* CTA card */}
-            <Reveal delay={180} className="h-full">
+            <Reveal delay={140} className="h-full">
               <div className="card card-navy flex h-full flex-col justify-between p-5 sm:p-6">
                 <div>
                   <span className="icon-box !bg-white/10 !text-white">
@@ -189,7 +189,7 @@ export default function HomePage() {
           />
           <div className="mt-8 sm:mt-12 grid gap-6 lg:grid-cols-3">
             {materialCategories.map((cat, i) => (
-              <Reveal key={cat.id} delay={i * 100}>
+              <Reveal key={cat.id} delay={i * 75}>
                 <div className="card card-accent-eco h-full p-5 sm:p-7">
                   <div className="flex items-center gap-3.5">
                     <span className="icon-box">
@@ -236,7 +236,7 @@ export default function HomePage() {
           />
           <div className="mt-10 sm:mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
-              <Reveal key={step.title} delay={i * 110}>
+              <Reveal key={step.title} delay={i * 80}>
                 <div className="relative">
                   {/* connector line */}
                   {i < steps.length - 1 && (
@@ -279,7 +279,7 @@ export default function HomePage() {
           />
           <div className="mt-10 sm:mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reasons.map((r, i) => (
-              <Reveal key={r.title} delay={(i % 3) * 90}>
+              <Reveal key={r.title} delay={(i % 3) * 70}>
                 <div className="card-dark h-full p-5 sm:p-7">
                   <span className="icon-box">
                     <Icon name={r.icon} className="h-6 w-6" />
@@ -322,7 +322,7 @@ export default function HomePage() {
               titleAr={ar.sections.about}
               intro={`${site.brand.legalName} is a registered single-owner limited liability company based in Deira, Dubai, trading scrap and metal waste under DED licence ${site.license.number}.`}
             />
-            <Reveal delay={120}>
+            <Reveal delay={100}>
               <ul className="mt-6 space-y-3">
                 {[
                   "Registered with Dubai DED — licence you can verify",
