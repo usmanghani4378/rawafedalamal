@@ -157,13 +157,13 @@ export default function HomePage() {
             ))}
             {/* CTA card */}
             <Reveal delay={180} className="h-full">
-              <div className="card flex h-full flex-col justify-between bg-navy p-5 sm:p-6">
+              <div className="card card-navy flex h-full flex-col justify-between p-5 sm:p-6">
                 <div>
                   <span className="icon-box !bg-white/10 !text-white">
                     <Phone className="h-6 w-6" />
                   </span>
                   <h3 className="heading-sm mt-5 text-white">Not Sure What You Have?</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
+                  <p className="mt-2.5 text-sm leading-relaxed text-gray-300">
                     Send us a photo of your scrap on WhatsApp and we&apos;ll tell you what
                     it&apos;s worth.
                   </p>
