@@ -25,7 +25,7 @@ export default function LicensePage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">License &amp; Legal · <span lang="ar" className="ar-inline">الترخيص والبيانات القانونية</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Verify Us Before You Sell
@@ -44,7 +44,7 @@ export default function LicensePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {/* licence card */}
           <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
-            <div className="flex items-center justify-between bg-navy px-7 py-5">
+            <div className="flex items-center justify-between bg-navy px-5 sm:px-5 sm:px-7 py-3.5 sm:py-4 sm:py-5">
               <div className="flex items-center gap-3">
                 <Landmark className="h-6 w-6 text-royal" />
                 <h2 className="font-display text-xl font-bold uppercase tracking-wide text-white">
@@ -120,7 +120,7 @@ export default function LicensePage() {
               ].map((row) => (
                 <div
                   key={row.label}
-                  className="grid gap-1 px-7 py-4 sm:grid-cols-[280px_1fr] sm:gap-4"
+                  className="grid gap-1 px-5 sm:px-7 py-3.5 sm:py-4 sm:grid-cols-[280px_1fr] sm:gap-4"
                 >
                   <dt className="text-xs font-bold uppercase tracking-wider text-steel">
                     <span className="flex items-center gap-2">
@@ -144,7 +144,7 @@ export default function LicensePage() {
           </div>
 
           {/* why it matters */}
-          <div className="mx-auto mt-16 grid max-w-5xl gap-6 md:grid-cols-3">
+          <div className="mx-auto mt-10 sm:mt-16 grid max-w-5xl gap-6 md:grid-cols-3">
             {[
               {
                 title: "Why Licensing Matters",
@@ -159,7 +159,7 @@ export default function LicensePage() {
                 text: "Company registration details can be confirmed with the Dubai Department of Economic Development. Ask us for anything you need to complete your own vendor checks.",
               },
             ].map((item) => (
-              <div key={item.title} className="card p-7">
+              <div key={item.title} className="card p-4 sm:p-7">
                 <h3 className="heading-sm text-navy">{item.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{item.text}</p>
               </div>

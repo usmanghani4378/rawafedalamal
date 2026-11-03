@@ -274,6 +274,98 @@ body {
   font-weight: 600;
 }
 
+/* ---------- Mobile-first compaction & premium touch ---------- */
+@media (max-width: 640px) {
+  .heading-lg {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+  }
+  .btn {
+    padding: 0.72rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  .chip {
+    font-size: 0.72rem;
+    padding: 0.32rem 0.7rem;
+  }
+}
+
+/* Buttons & chips: no 300ms tap delay, no blue tap flash */
+.btn,
+.chip,
+nav a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* On touch screens: no sticky hover jumps */
+@media (hover: none) {
+  .card:hover,
+  .card-dark:hover,
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Signature card borders ---------- */
+.card {
+  border-top: 3px solid var(--color-royal);
+}
+.card-dark {
+  border-top: 3px solid var(--color-royal);
+}
+.card:hover {
+  box-shadow: 0 14px 34px rgba(10, 28, 54, 0.12), 0 0 0 3px rgba(31, 111, 235, 0.14);
+}
+.card-dark:hover {
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.22);
+}
+/* green variant for recycling/eco contexts */
+.card-accent-eco {
+  border-top-color: var(--color-eco) !important;
+}
+
+/* ---------- Hero motion ---------- */
+.hero-zoom {
+  animation: heroZoom 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* ---------- Materials marquee ---------- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom {
+    animation: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
 /* Hero entrance animation */
 @keyframes fadeUp {
   from {

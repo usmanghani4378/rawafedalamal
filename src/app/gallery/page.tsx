@@ -15,7 +15,7 @@ export default function GalleryPage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">Gallery · <span lang="ar" className="ar-inline">معرض الأعمال</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Our Work, <span className="text-royal">Unfiltered</span>

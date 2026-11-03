@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">Contact Us · <span lang="ar" className="ar-inline">{ar.contact.call}</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Get Your Free Quote
@@ -31,12 +31,12 @@ export default function ContactPage() {
       </section>
 
       <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[420px_1fr]">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[420px_1fr]">
           {/* contact info */}
           <div className="space-y-4">
             <a
               href={`tel:${site.contact.phoneHref}`}
-              className="card flex items-center gap-4 p-5"
+              className="card flex items-center gap-4 p-4 sm:p-5"
             >
               <span className="icon-box icon-box--solid">
                 <Phone className="h-6 w-6" />
@@ -58,7 +58,7 @@ export default function ContactPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card flex items-center gap-4 p-5"
+                className="card flex items-center gap-4 p-4 sm:p-5"
               >
                 <span className="icon-box !bg-eco/10 !text-eco">
                   <WhatsAppGlyph className="h-6 w-6" />
@@ -74,7 +74,7 @@ export default function ContactPage() {
               </a>
             )}
 
-            <a href={`mailto:${site.contact.email}`} className="card flex items-center gap-4 p-5">
+            <a href={`mailto:${site.contact.email}`} className="card flex items-center gap-4 p-4 sm:p-5">
               <span className="icon-box">
                 <Mail className="h-6 w-6" />
               </span>
@@ -88,7 +88,7 @@ export default function ContactPage() {
               </span>
             </a>
 
-            <div className="card p-5">
+            <div className="card p-4 sm:p-5">
               <div className="flex items-start gap-4">
                 <span className="icon-box">
                   <MapPin className="h-6 w-6" />
@@ -111,7 +111,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="card p-5">
+            <div className="card p-4 sm:p-5">
               <div className="flex items-start gap-4">
                 <span className="icon-box">
                   <Clock className="h-6 w-6" />

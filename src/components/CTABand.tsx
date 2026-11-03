@@ -28,7 +28,7 @@ export default function CTABand({
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-navy/85" />
-      <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
+      <div className="relative mx-auto max-w-4xl px-4 py-12 sm:py-16 lg:py-20 text-center sm:px-6">
         <Reveal>
           <h2 className="heading-lg text-white">{title}</h2>
         {titleAr && (

@@ -19,7 +19,7 @@ export default function ServicesPage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">Our Services · <span lang="ar" className="ar-inline">خدماتنا</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Everything Your Scrap <span className="text-royal">Needs</span>
@@ -36,7 +36,7 @@ export default function ServicesPage() {
 
       {/* service list */}
       <section className="py-20">
-        <div className="mx-auto max-w-7xl space-y-16 px-4 sm:px-6">
+        <div className="mx-auto max-w-7xl space-y-12 sm:space-y-16 px-4 sm:px-6">
           {services.map((s, i) => (
             <div
               key={s.slug}

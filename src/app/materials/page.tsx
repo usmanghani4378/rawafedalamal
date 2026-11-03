@@ -18,7 +18,7 @@ export default function MaterialsPage() {
     <>
       {/* banner */}
       <section className="bg-navy">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 lg:py-20 sm:px-6">
           <span className="kicker">Materials We Buy · <span lang="ar" className="ar-inline">المواد التي نشتريها</span></span>
           <h1 className="heading-xl mt-3 text-white">
             If It&apos;s Metal, It&apos;s Money
@@ -38,8 +38,8 @@ export default function MaterialsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-6 lg:grid-cols-3">
             {materialCategories.map((cat) => (
-              <div key={cat.id} className="card overflow-hidden">
-                <div className="flex items-center gap-4 border-b border-gray-100 bg-mist px-6 py-5">
+              <div key={cat.id} className="card card-accent-eco overflow-hidden">
+                <div className="flex items-center gap-4 border-b border-gray-100 bg-mist px-5 py-4 sm:px-6 sm:py-5">
                   <span className="icon-box icon-box--solid">
                     <Icon name={cat.icon} className="h-6 w-6" />
                   </span>
@@ -61,7 +61,7 @@ export default function MaterialsPage() {
           </div>
 
           {/* not accepted */}
-          <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+          <div className="mt-8 sm:mt-12 grid gap-6 lg:grid-cols-[1fr_1.2fr]">
             <div className="rounded-xl border border-red-200 bg-red-50 p-7">
               <h3 className="flex items-center gap-2.5 font-display text-xl font-semibold uppercase text-red-700">
                 <XCircle className="h-5 w-5" /> What We Cannot Accept
@@ -81,7 +81,7 @@ export default function MaterialsPage() {
             </div>
 
             {/* rates disclaimer */}
-            <div className="card p-7">
+            <div className="card p-4 sm:p-7">
               <h3 className="flex items-center gap-2.5 font-display text-xl font-semibold uppercase text-navy">
                 <AlertTriangle className="h-5 w-5 text-navy" /> About Rates &amp; Prices
               </h3>
