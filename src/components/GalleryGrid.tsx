@@ -47,8 +47,8 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
             }}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
               filter === f
-                ? "bg-molten text-graphite"
-                : "bg-white text-steel ring-1 ring-gray-200 hover:text-graphite"
+                ? "bg-royal text-navy"
+                : "bg-white text-steel ring-1 ring-gray-200 hover:text-navy"
             }`}
           >
             {f}
@@ -71,9 +71,9 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            <span className="absolute inset-0 bg-gradient-to-t from-graphite/85 via-transparent to-transparent opacity-90" />
+            <span className="absolute inset-0 bg-gradient-to-t from-navy/85 via-transparent to-transparent opacity-90" />
             <span className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-molten">
+              <span className="block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-royal">
                 {item.category}
               </span>
               <span className="block text-sm font-semibold leading-snug text-white">
@@ -87,7 +87,7 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
       {/* lightbox */}
       {selected !== null && visible[selected] && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-graphite/95 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy/95 p-4"
           onClick={() => setSelected(null)}
         >
           <button

@@ -8,17 +8,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colours (from ROADMAP.md) */
-  --color-graphite: #171b22; /* darkest — header, footer, dark sections */
-  --color-iron: #232935; /* cards & panels on dark sections */
-  --color-line: #303848; /* borders on dark backgrounds */
-  --color-molten: #f59e0b; /* PRIMARY ACCENT — buttons, links, highlights */
-  --color-copper: #d97706; /* accent hover state */
+  /* Brand colours — navy & royal blue theme */
+  --color-navy: #0a1c36; /* darkest — header, footer, dark sections, headings */
+  --color-navy-light: #13294b; /* cards & panels on dark sections */
+  --color-line: #1e3c6d; /* borders on dark backgrounds */
+  --color-royal: #1f6feb; /* PRIMARY ACCENT — buttons, links, highlights */
+  --color-royal-dark: #1858c4; /* accent hover state */
   --color-eco: #2e9e5b; /* green — recycling / success cues */
-  --color-mist: #f5f7fa; /* light page background */
+  --color-mist: #f3f6fb; /* light page background */
   --color-paper: #ffffff; /* cards on light sections */
-  --color-ink: #22262e; /* body text on light */
-  --color-steel: #67707f; /* muted text */
+  --color-ink: #1b2534; /* body text on light */
+  --color-steel: #5d6c84; /* muted text */
 
   /* Fonts (loaded in layout.tsx via @fontsource) */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -38,13 +38,13 @@ body {
 }
 
 ::selection {
-  background: var(--color-molten);
-  color: var(--color-graphite);
+  background: var(--color-royal);
+  color: var(--color-navy);
 }
 
 /* ---------- Reusable component classes ---------- */
 
-/* Amber section label, e.g. "— WHAT WE DO" */
+/* Royal accent section label, e.g. "— WHAT WE DO" */
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -53,19 +53,19 @@ body {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-molten);
+  color: var(--color-royal);
 }
 .kicker::before {
   content: "";
   width: 2rem;
   height: 2px;
-  background: var(--color-molten);
+  background: var(--color-royal);
 }
 .kicker--center::after {
   content: "";
   width: 2rem;
   height: 2px;
-  background: var(--color-molten);
+  background: var(--color-royal);
 }
 
 /* Big condensed headings */
@@ -107,19 +107,19 @@ body {
   line-height: 1.2;
 }
 .btn-primary {
-  background: var(--color-molten);
-  color: var(--color-graphite);
+  background: var(--color-royal);
+  color: var(--color-navy);
 }
 .btn-primary:hover {
-  background: var(--color-copper);
+  background: var(--color-royal-dark);
   transform: translateY(-2px);
 }
 .btn-dark {
-  background: var(--color-graphite);
+  background: var(--color-navy);
   color: #fff;
 }
 .btn-dark:hover {
-  background: var(--color-iron);
+  background: var(--color-navy-light);
   transform: translateY(-2px);
 }
 .btn-outline-light {
@@ -127,8 +127,8 @@ body {
   color: #fff;
 }
 .btn-outline-light:hover {
-  border-color: var(--color-molten);
-  color: var(--color-molten);
+  border-color: var(--color-royal);
+  color: var(--color-royal);
   transform: translateY(-2px);
 }
 .btn-eco {
@@ -152,14 +152,14 @@ body {
   box-shadow: 0 14px 34px rgba(23, 27, 34, 0.1);
 }
 .card-dark {
-  background: var(--color-iron);
+  background: var(--color-navy-light);
   border: 1px solid var(--color-line);
   border-radius: 0.9rem;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 .card-dark:hover {
   transform: translateY(-4px);
-  border-color: var(--color-molten);
+  border-color: var(--color-royal);
 }
 
 /* Icon square used in cards */
@@ -170,13 +170,13 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 0.7rem;
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--color-molten);
+  background: rgba(31, 111, 235, 0.12);
+  color: var(--color-royal);
   flex-shrink: 0;
 }
 .icon-box--solid {
-  background: var(--color-molten);
-  color: var(--color-graphite);
+  background: var(--color-royal);
+  color: var(--color-navy);
 }
 
 /* Form inputs */
@@ -192,8 +192,8 @@ body {
 }
 .input:focus {
   outline: none;
-  border-color: var(--color-molten);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
+  border-color: var(--color-royal);
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.18);
 }
 .label {
   display: block;
@@ -241,7 +241,7 @@ body {
   content: "+";
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(--color-molten);
+  color: var(--color-royal);
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }

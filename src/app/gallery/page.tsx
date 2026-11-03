@@ -13,11 +13,11 @@ export default function GalleryPage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Gallery</span>
           <h1 className="heading-xl mt-3 text-white">
-            Our Work, <span className="text-molten">Unfiltered</span>
+            Our Work, <span className="text-royal">Unfiltered</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Collections, yard operations and export loading — real work by a licensed

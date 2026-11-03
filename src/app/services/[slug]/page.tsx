@@ -39,7 +39,7 @@ export default async function ServiceDetailPage({
       {/* banner */}
       <section className="relative">
         <Image src={service.image} alt="" fill className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-graphite/85" />
+        <div className="absolute inset-0 bg-navy/85" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="icon-box icon-box--solid">
             <Icon name={service.icon} className="h-6 w-6" />
@@ -55,11 +55,11 @@ export default async function ServiceDetailPage({
           <div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-steel hover:text-molten"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-steel hover:text-royal"
             >
               <ArrowLeft className="h-4 w-4" /> All services
             </Link>
-            <h2 className="heading-lg mt-6 text-graphite">What&apos;s Included</h2>
+            <h2 className="heading-lg mt-6 text-navy">What&apos;s Included</h2>
             <p className="mt-4 leading-relaxed text-steel">{service.description}</p>
 
             <ul className="mt-8 space-y-3">
@@ -74,8 +74,8 @@ export default async function ServiceDetailPage({
               ))}
             </ul>
 
-            <div className="mt-10 rounded-xl border border-molten/40 bg-molten/10 p-6">
-              <h3 className="heading-sm text-graphite">Have material for this service?</h3>
+            <div className="mt-10 rounded-xl border border-royal/40 bg-royal/10 p-6">
+              <h3 className="heading-sm text-navy">Have material for this service?</h3>
               <p className="mt-2 text-sm text-steel">
                 Send your list and location — we reply with today&apos;s rate and the
                 earliest collection slot.
@@ -84,7 +84,7 @@ export default async function ServiceDetailPage({
                 <Link href="/contact" className="btn btn-primary">
                   Request a Quote <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light !border-gray-300 !text-graphite hover:!border-molten hover:!text-molten">
+                <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light !border-gray-300 !text-navy hover:!border-royal hover:!text-royal">
                   <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
                 </a>
               </div>
@@ -93,7 +93,7 @@ export default async function ServiceDetailPage({
 
           {/* sidebar: other services */}
           <aside>
-            <h3 className="heading-sm text-graphite">Other Services</h3>
+            <h3 className="heading-sm text-navy">Other Services</h3>
             <div className="mt-5 space-y-4">
               {others.map((o) => (
                 <Link
@@ -105,7 +105,7 @@ export default async function ServiceDetailPage({
                     <Icon name={o.icon} className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold text-graphite group-hover:text-molten">
+                    <span className="block text-sm font-semibold text-navy group-hover:text-royal">
                       {o.title}
                     </span>
                     <span className="mt-0.5 line-clamp-1 block text-xs text-steel">

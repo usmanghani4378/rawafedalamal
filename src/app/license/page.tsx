@@ -23,11 +23,11 @@ export default function LicensePage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">License &amp; Legal</span>
           <h1 className="heading-xl mt-3 text-white">
-            Verify Us Before <span className="text-molten">You Sell</span>
+            Verify Us Before <span className="text-royal">You Sell</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             We&apos;re proud to be a registered, licensed business — and we encourage
@@ -40,9 +40,9 @@ export default function LicensePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {/* licence card */}
           <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg">
-            <div className="flex items-center justify-between bg-graphite px-7 py-5">
+            <div className="flex items-center justify-between bg-navy px-7 py-5">
               <div className="flex items-center gap-3">
-                <Landmark className="h-6 w-6 text-molten" />
+                <Landmark className="h-6 w-6 text-royal" />
                 <h2 className="font-display text-xl font-bold uppercase tracking-wide text-white">
                   Certificate of Trade Licence
                 </h2>
@@ -103,7 +103,7 @@ export default function LicensePage() {
                   className="grid gap-1 px-7 py-4 sm:grid-cols-[280px_1fr] sm:gap-4"
                 >
                   <dt className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-steel">
-                    <row.icon className="h-4 w-4 text-molten" /> {row.label}
+                    <row.icon className="h-4 w-4 text-royal" /> {row.label}
                   </dt>
                   <dd className="text-sm font-medium text-ink">{row.value}</dd>
                 </div>
@@ -128,17 +128,17 @@ export default function LicensePage() {
               },
             ].map((item) => (
               <div key={item.title} className="card p-7">
-                <h3 className="heading-sm text-graphite">{item.title}</h3>
+                <h3 className="heading-sm text-navy">{item.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{item.text}</p>
               </div>
             ))}
           </div>
 
           {/* vendor note */}
-          <div className="mx-auto mt-10 max-w-5xl rounded-xl border border-molten/40 bg-molten/10 p-6 text-sm leading-relaxed text-ink">
+          <div className="mx-auto mt-10 max-w-5xl rounded-xl border border-royal/40 bg-royal/10 p-6 text-sm leading-relaxed text-ink">
             <strong>For contractors &amp; procurement teams:</strong> we regularly
             complete vendor-onboarding for main contractors and government suppliers.
-            <Link href="/contact" className="ml-1 inline-flex items-center gap-1 font-semibold text-molten hover:text-copper">
+            <Link href="/contact" className="ml-1 inline-flex items-center gap-1 font-semibold text-royal hover:text-royal-dark">
               Request our company documents <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#171B22",
+  themeColor: "#0A1C36",
 };
 
 /* Google rich-result data for local SEO (uses details from src/data/site.ts) */

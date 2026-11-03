@@ -13,11 +13,11 @@ export default function ContactPage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Contact Us</span>
           <h1 className="heading-xl mt-3 text-white">
-            Get Your <span className="text-molten">Free Quote</span>
+            Get Your <span className="text-royal">Free Quote</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Tell us what scrap you have and where it is — we&apos;ll come back with
@@ -41,7 +41,7 @@ export default function ContactPage() {
                 <span className="block text-xs font-bold uppercase tracking-wider text-steel">
                   Call Us
                 </span>
-                <span className="block text-lg font-bold text-graphite">
+                <span className="block text-lg font-bold text-navy">
                   {site.contact.phoneDisplay}
                 </span>
               </span>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <span className="block text-xs font-bold uppercase tracking-wider text-steel">
                     WhatsApp
                   </span>
-                  <span className="block text-lg font-bold text-graphite">
+                  <span className="block text-lg font-bold text-navy">
                     Chat With Us Now
                   </span>
                 </span>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <span className="block text-xs font-bold uppercase tracking-wider text-steel">
                   Email
                 </span>
-                <span className="block truncate text-sm font-bold text-graphite">
+                <span className="block truncate text-sm font-bold text-navy">
                   {site.contact.email}
                 </span>
               </span>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   <p className="text-xs font-bold uppercase tracking-wider text-steel">
                     Registered Office
                   </p>
-                  <p className="mt-1 text-sm font-medium leading-relaxed text-graphite">
+                  <p className="mt-1 text-sm font-medium leading-relaxed text-navy">
                     {site.contact.addressLines.map((l) => (
                       <span key={l} className="block">
                         {l}
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   <p className="text-xs font-bold uppercase tracking-wider text-steel">
                     Working Hours
                   </p>
-                  <p className="mt-1 text-sm font-medium text-graphite">
+                  <p className="mt-1 text-sm font-medium text-navy">
                     {site.contact.hours.map((h) => (
                       <span key={h.days} className="block">
                         <span className="text-steel">{h.days}:</span> {h.time}
@@ -124,7 +124,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-molten/40 bg-molten/10 p-5 text-sm leading-relaxed text-ink">
+            <div className="rounded-xl border border-royal/40 bg-royal/10 p-5 text-sm leading-relaxed text-ink">
               <strong>Contractor or factory?</strong> Ask about account terms and
               scheduled weekly collections.
             </div>

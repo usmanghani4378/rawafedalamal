@@ -17,11 +17,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Our Services</span>
           <h1 className="heading-xl mt-3 text-white">
-            Everything Your Scrap <span className="text-molten">Needs</span>
+            Everything Your Scrap <span className="text-royal">Needs</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Five services, one licensed partner — from the first phone call to the final
@@ -51,7 +51,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <span className="kicker">{`0${i + 1}`}</span>
-                <h2 className="heading-lg mt-3 text-graphite">{s.title}</h2>
+                <h2 className="heading-lg mt-3 text-navy">{s.title}</h2>
                 <p className="mt-4 leading-relaxed text-steel">{s.short}</p>
                 <ul className="mt-5 space-y-2.5">
                   {s.bullets.slice(0, 3).map((b) => (
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                 key={area}
                 className="inline-flex items-center gap-1.5 rounded-full bg-mist px-4 py-2 text-sm font-medium text-ink ring-1 ring-gray-200"
               >
-                <MapPin className="h-3.5 w-3.5 text-molten" /> {area}
+                <MapPin className="h-3.5 w-3.5 text-royal" /> {area}
               </span>
             ))}
           </div>

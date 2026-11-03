@@ -11,7 +11,7 @@ export default function TermsPage() {
     <section className="py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <span className="kicker">Legal</span>
-        <h1 className="heading-lg mt-3 text-graphite">Terms of Trade</h1>
+        <h1 className="heading-lg mt-3 text-navy">Terms of Trade</h1>
         <p className="mt-2 text-sm text-steel">Last updated: November 2026</p>
 
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-ink">
@@ -21,7 +21,7 @@ export default function TermsPage() {
             UAE.
           </p>
           <div>
-            <h2 className="heading-sm text-graphite">1. Ownership &amp; Right to Sell</h2>
+            <h2 className="heading-sm text-navy">1. Ownership &amp; Right to Sell</h2>
             <p className="mt-2">
               By offering material to us, you confirm that you own it or are authorised
               to sell it, and that it is not stolen or subject to any dispute. We may
@@ -29,7 +29,7 @@ export default function TermsPage() {
             </p>
           </div>
           <div>
-            <h2 className="heading-sm text-graphite">2. Pricing</h2>
+            <h2 className="heading-sm text-navy">2. Pricing</h2>
             <p className="mt-2">
               Rates are agreed before or at the point of collection and depend on
               material type, grade, weight and market prices on the day. Quotations are
@@ -37,14 +37,14 @@ export default function TermsPage() {
             </p>
           </div>
           <div>
-            <h2 className="heading-sm text-graphite">3. Weighing &amp; Payment</h2>
+            <h2 className="heading-sm text-navy">3. Weighing &amp; Payment</h2>
             <p className="mt-2">
               All material is weighed on certified scales. Payment is made immediately
               after weighing, in cash or by bank transfer, as agreed with the seller.
             </p>
           </div>
           <div>
-            <h2 className="heading-sm text-graphite">4. Prohibited Materials</h2>
+            <h2 className="heading-sm text-navy">4. Prohibited Materials</h2>
             <p className="mt-2">
               We do not accept hazardous, medical, radioactive or otherwise prohibited
               waste. Where such material is discovered in a delivered load, the load may
@@ -52,7 +52,7 @@ export default function TermsPage() {
             </p>
           </div>
           <div>
-            <h2 className="heading-sm text-graphite">5. Compliance</h2>
+            <h2 className="heading-sm text-navy">5. Compliance</h2>
             <p className="mt-2">
               We operate under DED Trade Licence {site.license.number} and in line with
               applicable UAE and Dubai Municipality regulations. Sellers may be asked
@@ -60,7 +60,7 @@ export default function TermsPage() {
             </p>
           </div>
           <div>
-            <h2 className="heading-sm text-graphite">6. Contact</h2>
+            <h2 className="heading-sm text-navy">6. Contact</h2>
             <p className="mt-2">
               Questions about these terms: {site.contact.phoneDisplay} ·{" "}
               {site.contact.email}

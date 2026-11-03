@@ -16,7 +16,7 @@ export default function SectionHeading({
     <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
       <span className={`kicker ${center ? "kicker--center" : ""}`}>{kicker}</span>
       <h2
-        className={`heading-lg mt-3 ${dark ? "text-white" : "text-graphite"}`}
+        className={`heading-lg mt-3 ${dark ? "text-white" : "text-navy"}`}
       >
         {title}
       </h2>

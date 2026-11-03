@@ -23,11 +23,11 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">How It Works</span>
           <h1 className="heading-xl mt-3 text-white">
-            From Call to Cash in <span className="text-molten">4 Steps</span>
+            From Call to Cash in <span className="text-royal">4 Steps</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             No accounts, no paperwork marathons, no waiting for transfers. This is how
@@ -42,20 +42,20 @@ export default function HowItWorksPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <div key={step.title} className="card relative p-7">
-                <span className="absolute right-6 top-5 font-display text-5xl font-bold text-molten/25">
+                <span className="absolute right-6 top-5 font-display text-5xl font-bold text-royal/25">
                   {i + 1}
                 </span>
                 <span className="icon-box icon-box--solid">
                   <Icon name={step.icon} className="h-6 w-6" />
                 </span>
-                <h2 className="heading-sm mt-5 text-graphite">{step.title}</h2>
+                <h2 className="heading-sm mt-5 text-navy">{step.title}</h2>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{step.text}</p>
               </div>
             ))}
           </div>
 
           {/* transparency promise */}
-          <div className="mt-14 grid gap-6 rounded-2xl bg-graphite p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center">
+          <div className="mt-14 grid gap-6 rounded-2xl bg-navy p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center">
             <span className="icon-box icon-box--solid mx-auto h-16 w-16 !rounded-2xl">
               <CheckCircle2 className="h-8 w-8" />
             </span>

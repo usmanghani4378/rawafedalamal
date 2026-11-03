@@ -9,7 +9,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-graphite text-gray-400">
+    <footer className="bg-navy text-gray-400">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         {/* brand */}
         <div>
@@ -19,7 +19,7 @@ export default function Footer() {
             company in Dubai. Fair weighing, instant payment, collection across the
             emirate.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-line bg-iron px-3 py-2 text-xs">
+          <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-line bg-navy-light px-3 py-2 text-xs">
             <span className="h-2 w-2 rounded-full bg-eco" />
             <span>
               DED Trade Licence <strong className="text-white">{site.license.number}</strong>
@@ -35,13 +35,13 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm">
             {site.nav.slice(1, 6).map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="transition-colors hover:text-molten">
+                <Link href={item.href} className="transition-colors hover:text-royal">
                   {item.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/license" className="transition-colors hover:text-molten">
+              <Link href="/license" className="transition-colors hover:text-royal">
                 License &amp; Legal
               </Link>
             </li>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="transition-colors hover:text-molten"
+                  className="transition-colors hover:text-royal"
                 >
                   {s.title}
                 </Link>
@@ -74,7 +74,7 @@ export default function Footer() {
           </h4>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-molten" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-royal" />
               <span>
                 {site.contact.addressLines.map((line) => (
                   <span key={line} className="block">
@@ -86,23 +86,23 @@ export default function Footer() {
             <li>
               <a
                 href={`tel:${site.contact.phoneHref}`}
-                className="flex gap-2.5 hover:text-molten"
+                className="flex gap-2.5 hover:text-royal"
               >
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-molten" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-royal" />
                 {site.contact.phoneDisplay}
               </a>
             </li>
             <li>
               <a
                 href={`mailto:${site.contact.email}`}
-                className="flex gap-2.5 break-all hover:text-molten"
+                className="flex gap-2.5 break-all hover:text-royal"
               >
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-molten" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-royal" />
                 {site.contact.email}
               </a>
             </li>
             <li className="flex gap-2.5">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-molten" />
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-royal" />
               <span>
                 {site.contact.hours.map((h) => (
                   <span key={h.days} className="block">
@@ -126,10 +126,10 @@ export default function Footer() {
             {site.license.number}
           </p>
           <p className="flex gap-4">
-            <Link href="/privacy" className="hover:text-molten">
+            <Link href="/privacy" className="hover:text-royal">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-molten">
+            <Link href="/terms" className="hover:text-royal">
               Terms
             </Link>
           </p>

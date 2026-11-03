@@ -32,13 +32,13 @@ export default function HomePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-graphite/95 via-graphite/80 to-graphite/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
         <div className="relative mx-auto w-full max-w-7xl px-4 py-24 sm:px-6">
           <div className="max-w-2xl">
             <p className="fade-up kicker">{site.brand.tagline}</p>
             <h1 className="fade-up fade-up-1 heading-xl mt-4 text-white">
               We Buy Your Scrap Metal.{" "}
-              <span className="text-molten">Fairly Weighed. Instantly Paid.</span>
+              <span className="text-royal">Fairly Weighed. Instantly Paid.</span>
             </h1>
             <p className="fade-up fade-up-2 mt-6 max-w-xl text-lg leading-relaxed text-gray-300">
               {site.brand.legalName} is a licensed Dubai company buying ferrous and
@@ -55,15 +55,15 @@ export default function HomePage() {
             </div>
             <div className="fade-up fade-up-4 mt-9 flex flex-wrap gap-2.5">
               <span className="chip">
-                <BadgeCheck className="h-4 w-4 text-molten" />
+                <BadgeCheck className="h-4 w-4 text-royal" />
                 DED Licence {site.license.number}
               </span>
               <span className="chip">
-                <ShieldCheck className="h-4 w-4 text-molten" />
+                <ShieldCheck className="h-4 w-4 text-royal" />
                 Municipality Compliant
               </span>
               <span className="chip">
-                <MapPin className="h-4 w-4 text-molten" />
+                <MapPin className="h-4 w-4 text-royal" />
                 Pickup Across Dubai
               </span>
             </div>
@@ -72,14 +72,14 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 2) TRUST / STATS BAND ═══════════ */}
-      <section className="bg-molten">
+      <section className="bg-royal">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4">
           {site.stats.map((s) => (
             <div key={s.label} className="text-center lg:text-left">
-              <p className="font-display text-3xl font-bold uppercase text-graphite sm:text-4xl">
+              <p className="font-display text-3xl font-bold uppercase text-navy sm:text-4xl">
                 {s.value}
               </p>
-              <p className="mt-1 text-sm font-semibold text-graphite/75">{s.label}</p>
+              <p className="mt-1 text-sm font-semibold text-navy/75">{s.label}</p>
             </div>
           ))}
         </div>
@@ -96,7 +96,7 @@ export default function HomePage() {
             />
             <Link
               href="/services"
-              className="hidden items-center gap-1.5 font-semibold text-graphite hover:text-molten sm:inline-flex"
+              className="hidden items-center gap-1.5 font-semibold text-navy hover:text-royal sm:inline-flex"
             >
               All services <ArrowRight className="h-4 w-4" />
             </Link>
@@ -108,17 +108,17 @@ export default function HomePage() {
                 <span className="icon-box">
                   <Icon name={s.icon} className="h-6 w-6" />
                 </span>
-                <h3 className="heading-sm mt-5 text-graphite group-hover:text-molten">
+                <h3 className="heading-sm mt-5 text-navy group-hover:text-royal">
                   {s.title}
                 </h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{s.short}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-molten">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-royal">
                   Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}
             {/* CTA card */}
-            <div className="card flex flex-col justify-between bg-graphite p-6">
+            <div className="card flex flex-col justify-between bg-navy p-6">
               <div>
                 <span className="icon-box icon-box--solid">
                   <Phone className="h-6 w-6" />
@@ -154,7 +154,7 @@ export default function HomePage() {
                     <Icon name={cat.icon} className="h-6 w-6" />
                   </span>
                   <div>
-                    <h3 className="heading-sm text-graphite">{cat.title}</h3>
+                    <h3 className="heading-sm text-navy">{cat.title}</h3>
                     <p className="text-xs font-medium text-steel">{cat.note}</p>
                   </div>
                 </div>
@@ -195,25 +195,25 @@ export default function HomePage() {
               <div key={step.title} className="relative">
                 {/* connector line */}
                 {i < steps.length - 1 && (
-                  <span className="absolute left-[calc(50%+3rem)] top-8 hidden h-0.5 w-[calc(100%-6rem)] bg-gradient-to-r from-molten/60 to-transparent lg:block" />
+                  <span className="absolute left-[calc(50%+3rem)] top-8 hidden h-0.5 w-[calc(100%-6rem)] bg-gradient-to-r from-royal/60 to-transparent lg:block" />
                 )}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative">
                     <span className="icon-box icon-box--solid h-16 w-16 !rounded-2xl">
                       <Icon name={step.icon} className="h-8 w-8" />
                     </span>
-                    <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-graphite font-display text-sm font-bold text-molten ring-2 ring-mist">
+                    <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-navy font-display text-sm font-bold text-royal ring-2 ring-mist">
                       {i + 1}
                     </span>
                   </div>
-                  <h3 className="heading-sm mt-5 text-graphite">{step.title}</h3>
+                  <h3 className="heading-sm mt-5 text-navy">{step.title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-steel">{step.text}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link href="/how-it-works" className="font-semibold text-molten hover:text-copper">
+            <Link href="/how-it-works" className="font-semibold text-royal hover:text-royal-dark">
               More details &amp; FAQ →
             </Link>
           </div>
@@ -221,7 +221,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 6) WHY CHOOSE US (dark) ═══════════ */}
-      <section className="bg-graphite py-20">
+      <section className="bg-navy py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading
             center
@@ -257,11 +257,11 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-6 -right-2 rounded-xl bg-molten px-6 py-5 shadow-xl sm:right-6">
-              <p className="font-display text-2xl font-bold uppercase leading-none text-graphite">
+            <div className="absolute -bottom-6 -right-2 rounded-xl bg-royal px-6 py-5 shadow-xl sm:right-6">
+              <p className="font-display text-2xl font-bold uppercase leading-none text-navy">
                 Dubai
               </p>
-              <p className="mt-1 text-xs font-semibold text-graphite/70">
+              <p className="mt-1 text-xs font-semibold text-navy/70">
                 Registered &amp; Operating Locally
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function HomePage() {
               <Link href="/about" className="btn btn-dark">
                 Our Story
               </Link>
-              <Link href="/license" className="btn btn-outline-light !border-gray-300 !text-graphite hover:!border-molten hover:!text-molten">
+              <Link href="/license" className="btn btn-outline-light !border-gray-300 !text-navy hover:!border-royal hover:!text-royal">
                 <ShieldCheck className="h-4 w-4" /> View License Details
               </Link>
             </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
             />
             <Link
               href="/gallery"
-              className="hidden items-center gap-1.5 font-semibold text-graphite hover:text-molten sm:inline-flex"
+              className="hidden items-center gap-1.5 font-semibold text-navy hover:text-royal sm:inline-flex"
             >
               Full gallery <ArrowRight className="h-4 w-4" />
             </Link>
@@ -326,16 +326,16 @@ export default function HomePage() {
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {testimonials.map((t) => (
                 <figure key={t.name} className="card p-7">
-                  <Quote className="h-7 w-7 text-molten" />
+                  <Quote className="h-7 w-7 text-royal" />
                   <blockquote className="mt-4 text-sm leading-relaxed text-ink">
                     {t.text}
                   </blockquote>
                   <figcaption className="mt-5 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-molten text-molten" />
+                      <Star key={i} className="h-4 w-4 fill-royal text-royal" />
                     ))}
                   </figcaption>
-                  <p className="mt-2 text-sm font-semibold text-graphite">{t.name}</p>
+                  <p className="mt-2 text-sm font-semibold text-navy">{t.name}</p>
                   <p className="text-xs text-steel">{t.role}</p>
                 </figure>
               ))}

@@ -16,11 +16,11 @@ export default function MaterialsPage() {
   return (
     <>
       {/* banner */}
-      <section className="bg-graphite">
+      <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Materials We Buy</span>
           <h1 className="heading-xl mt-3 text-white">
-            If It&apos;s Metal, <span className="text-molten">It&apos;s Money</span>
+            If It&apos;s Metal, <span className="text-royal">It&apos;s Money</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             The complete list of what we buy — sorted or mixed, any quantity, collected
@@ -40,7 +40,7 @@ export default function MaterialsPage() {
                     <Icon name={cat.icon} className="h-6 w-6" />
                   </span>
                   <div>
-                    <h2 className="heading-sm text-graphite">{cat.title}</h2>
+                    <h2 className="heading-sm text-navy">{cat.title}</h2>
                     <p className="text-xs font-medium text-steel">{cat.note}</p>
                   </div>
                 </div>
@@ -78,8 +78,8 @@ export default function MaterialsPage() {
 
             {/* rates disclaimer */}
             <div className="card p-7">
-              <h3 className="flex items-center gap-2.5 font-display text-xl font-semibold uppercase text-graphite">
-                <AlertTriangle className="h-5 w-5 text-molten" /> About Rates &amp; Prices
+              <h3 className="flex items-center gap-2.5 font-display text-xl font-semibold uppercase text-navy">
+                <AlertTriangle className="h-5 w-5 text-royal" /> About Rates &amp; Prices
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-steel">
                 {materialsDisclaimer}
@@ -87,7 +87,7 @@ export default function MaterialsPage() {
               <p className="mt-3 text-sm leading-relaxed text-steel">
                 Rates depend on material grade, quantity and contamination levels. Sorted,
                 clean material always earns the best price — see our{" "}
-                <Link href="/how-it-works" className="font-semibold text-molten hover:text-copper">
+                <Link href="/how-it-works" className="font-semibold text-royal hover:text-royal-dark">
                   how it works
                 </Link>{" "}
                 page for preparation tips.

@@ -162,7 +162,7 @@ export default function QuoteForm() {
           </>
         ) : (
           <>
-            <Mail className="h-3.5 w-3.5 text-molten" />
+            <Mail className="h-3.5 w-3.5 text-royal" />
             Submitting opens your email app with the request pre-filled.
           </>
         )}

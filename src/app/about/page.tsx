@@ -17,7 +17,7 @@ export default function AboutPage() {
       {/* page banner */}
       <section className="relative">
         <Image src={site.images.about} alt="" fill className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-graphite/85" />
+        <div className="absolute inset-0 bg-navy/85" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">About Us</span>
           <h1 className="heading-xl mt-3 text-white">The Company Behind the Trucks</h1>
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* vision / mission / values */}
-      <section className="bg-graphite py-20">
+      <section className="bg-navy py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeading center dark kicker="What Drives Us" title="Vision, Mission & Values" />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -111,11 +111,11 @@ export default function AboutPage() {
               <ShieldCheck className="h-8 w-8" />
             </span>
             <div>
-              <h2 className="heading-sm text-graphite">Licensed &amp; Accountable</h2>
+              <h2 className="heading-sm text-navy">Licensed &amp; Accountable</h2>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-steel">
                 {site.brand.legalName} — {site.license.legalForm}. Registered with the{" "}
                 {site.license.issuer}, Trade Licence No.{" "}
-                <strong className="text-graphite">{site.license.number}</strong>. Our
+                <strong className="text-navy">{site.license.number}</strong>. Our
                 operations follow Dubai Municipality waste-trading regulations.
               </p>
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -163,7 +163,7 @@ export default function AboutPage() {
               },
             ].map((item) => (
               <div key={item.title} className="card p-6 text-center">
-                <h3 className="heading-sm text-graphite">{item.title}</h3>
+                <h3 className="heading-sm text-navy">{item.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-steel">{item.text}</p>
               </div>
             ))}

@@ -21,7 +21,7 @@ export default function CTABand({
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-graphite/85" />
+      <div className="absolute inset-0 bg-navy/85" />
       <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
         <h2 className="heading-lg text-white">{title}</h2>
         <p className="mx-auto mt-4 max-w-xl text-gray-300">{text}</p>
