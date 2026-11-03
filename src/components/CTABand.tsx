@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import Reveal from "@/components/Reveal";
 import { WhatsAppGlyph } from "@/components/WhatsAppFloat";
 import { site } from "@/data/site";
 import { ar } from "@/data/bilingual";
@@ -28,7 +29,8 @@ export default function CTABand({
       />
       <div className="absolute inset-0 bg-navy/85" />
       <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
-        <h2 className="heading-lg text-white">{title}</h2>
+        <Reveal>
+          <h2 className="heading-lg text-white">{title}</h2>
         {titleAr && (
           <p lang="ar" className="ar mt-2 text-2xl font-bold text-blue-200/90">
             {titleAr}
@@ -58,6 +60,7 @@ export default function CTABand({
             </a>
           )}
         </div>
+        </Reveal>
       </div>
     </section>
   );

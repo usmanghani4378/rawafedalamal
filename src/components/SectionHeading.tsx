@@ -1,5 +1,7 @@
 /* Reusable section heading: accent kicker + big condensed title + optional
-   Arabic title + optional intro */
+   Arabic title + optional intro. Reveals on scroll. */
+import Reveal from "@/components/Reveal";
+
 export default function SectionHeading({
   kicker,
   title,
@@ -16,7 +18,7 @@ export default function SectionHeading({
   dark?: boolean;
 }) {
   return (
-    <div className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
+    <Reveal className={`max-w-2xl ${center ? "mx-auto text-center" : ""}`}>
       <span className={`kicker ${center ? "kicker--center" : ""}`}>{kicker}</span>
       <h2
         className={`heading-lg mt-3 ${dark ? "text-white" : "text-navy"}`}
@@ -36,6 +38,6 @@ export default function SectionHeading({
           {intro}
         </p>
       )}
-    </div>
+    </Reveal>
   );
 }
