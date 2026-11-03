@@ -326,6 +326,12 @@ nav a {
 .card-accent-eco {
   border-top-color: var(--color-eco) !important;
 }
+/* Navy variant for cards — must come after .card so the background wins
+   (unlayered CSS beats Tailwind's layered bg-* utilities). */
+.card-navy {
+  background: var(--color-navy);
+  border-color: var(--color-line);
+}
 
 /* ---------- Hero motion ---------- */
 /* Zoom never drops to 1.0 — starting above 100% guarantees the wallpaper
