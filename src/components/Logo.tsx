@@ -1,6 +1,7 @@
 /* Logo: hand-coded SVG mark (recycle arrows around an ingot) + wordmark.
    To use your own logo image instead, see docs/editing-guide.md. */
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
   return (
@@ -25,12 +26,22 @@ export default function Logo({ dark = false }: { dark?: boolean }) {
     <span className="inline-flex items-center gap-2.5">
       <LogoMark className="h-9 w-9 sm:h-10 sm:w-10" />
       <span className="leading-none">
-        <span
-          className={`block font-display text-xl sm:text-2xl font-bold uppercase tracking-wide ${
-            dark ? "text-navy" : "text-white"
-          }`}
-        >
-          {site.brand.name}
+        <span className="flex items-baseline gap-2">
+          <span
+            className={`block font-display text-xl sm:text-2xl font-bold uppercase tracking-wide ${
+              dark ? "text-navy" : "text-white"
+            }`}
+          >
+            {site.brand.name}
+          </span>
+          <span
+            lang="ar"
+            className={`ar-inline hidden text-base font-bold sm:inline ${
+              dark ? "text-navy/80" : "text-white/85"
+            }`}
+          >
+            {ar.brand.name}
+          </span>
         </span>
         <span className="block text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-royal">
           Scrap &amp; Metal Trading

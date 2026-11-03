@@ -18,6 +18,7 @@ You edit simple text files; the site updates automatically.
 | **Address / map** | `src/data/site.ts` | `contact` → `addressLines` / `mapQuery` |
 | **Working hours** | `src/data/site.ts` | `contact` → `hours` |
 | **License details** | `src/data/site.ts` | `license` |
+| **Arabic text** 🇦🇪 | `src/data/bilingual.ts` | all Arabic strings in one place |
 | **Homepage big numbers** | `src/data/site.ts` | `stats` |
 | **Background images** | `src/data/site.ts` **or** replace files in `public/images/` (same name = easiest) | `images` |
 | **Services text** | `src/data/services.ts` | `services` |
@@ -33,7 +34,22 @@ quotes `"..."`.
 
 ---
 
-## 2. WhatsApp number (do this first!)
+## 2. Arabic text (bilingual content)
+
+All Arabic shown on the site lives in **`src/data/bilingual.ts`** — company name,
+tagline, hero paragraph, section titles, banners, contact labels, form labels and
+license values. Edit any text between the quotes and save; set a string to `""`
+to hide that Arabic line.
+
+Arabic renders right-to-left in the **Cairo** font automatically (`.ar` and
+`.ar-inline` CSS classes in `src/app/globals.css`).
+
+> ⚠️ Please verify the Arabic legal company name spelling against the Arabic
+> copy of the trade licence once available.
+
+---
+
+## 3. WhatsApp number (do this first!)
 
 The WhatsApp button and the quote form are **hidden until you add the number**:
 
@@ -45,7 +61,7 @@ The WhatsApp button and the quote form are **hidden until you add the number**:
 
 ---
 
-## 3. Replacing images
+## 4. Replacing images
 
 **Easiest way:** drop your photo into `public/images/` using the **exact same
 file name** as the one you're replacing (see `public/images/README.txt` for
@@ -66,7 +82,7 @@ then open `src/data/content.ts` and add one entry to the `gallery` list:
 },
 ```
 
-## 4. Using your own logo
+## 5. Using your own logo
 
 The current logo is a built-in amber mark with the brand name text.
 To use a real logo image:
@@ -76,7 +92,7 @@ To use a real logo image:
    `<Image src="/images/logo.png" alt={site.brand.name} width={40} height={40} />`
    (add `import Image from "next/image";` at the top of that file)
 
-## 5. Running the site
+## 6. Running the site
 
 ```bash
 npm run dev     # development — live reload while you edit (http://localhost:3000)
@@ -87,7 +103,7 @@ npm run start   # serve the production build
 After editing files, the dev server updates instantly; for production, run
 `npm run build` again.
 
-## 6. Going live
+## 7. Going live
 
 - Point your domain (e.g. `rawafedalamal.ae`) at your host — the site deploys
   to any Node host or Vercel/Netlify in one click.
@@ -95,12 +111,13 @@ After editing files, the dev server updates instantly; for production, run
 - Add the site to **Google Business Profile** and Search Console
   (`https://<domain>/sitemap.xml` is already generated).
 
-## 7. Quick reference — file map
+## 8. Quick reference — file map
 
 ```
 src/
   data/
     site.ts        ← ⭐ ALL settings: contact, license, hours, images, SEO, menu
+    bilingual.ts   ← ⭐ ALL Arabic text
     services.ts    ← services + materials lists
     content.ts     ← steps, why-us, gallery, testimonials, FAQ
   components/      ← header, footer, forms, gallery (rarely need edits)

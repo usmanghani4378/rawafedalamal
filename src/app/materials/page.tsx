@@ -3,6 +3,7 @@ import Link from "next/link";
 import { AlertTriangle, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
+import { ar } from "@/data/bilingual";
 import { Icon } from "@/components/icons";
 import { materialCategories, notAccepted, materialsDisclaimer } from "@/data/services";
 
@@ -18,13 +19,16 @@ export default function MaterialsPage() {
       {/* banner */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">Materials We Buy</span>
+          <span className="kicker">Materials We Buy · <span lang="ar" className="ar-inline">المواد التي نشتريها</span></span>
           <h1 className="heading-xl mt-3 text-white">
             If It&apos;s Metal, <span className="text-royal">It&apos;s Money</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             The complete list of what we buy — sorted or mixed, any quantity, collected
             anywhere in Dubai.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.materials}
           </p>
         </div>
       </section>

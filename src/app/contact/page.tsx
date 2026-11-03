@@ -3,6 +3,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
 import { WhatsAppGlyph } from "@/components/WhatsAppFloat";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export const metadata: Metadata = {
   title: "Contact & Get a Quote",
@@ -15,13 +16,16 @@ export default function ContactPage() {
       {/* banner */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">Contact Us</span>
+          <span className="kicker">Contact Us · <span lang="ar" className="ar-inline">{ar.contact.call}</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Get Your <span className="text-royal">Free Quote</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Tell us what scrap you have and where it is — we&apos;ll come back with
             today&apos;s rate and the earliest collection time.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.contact}
           </p>
         </div>
       </section>
@@ -39,7 +43,7 @@ export default function ContactPage() {
               </span>
               <span>
                 <span className="block text-xs font-bold uppercase tracking-wider text-steel">
-                  Call Us
+                  Call Us · <span lang="ar" className="ar-inline">{ar.contact.call}</span>
                 </span>
                 <span className="block text-lg font-bold text-navy">
                   {site.contact.phoneDisplay}
@@ -61,7 +65,7 @@ export default function ContactPage() {
                 </span>
                 <span>
                   <span className="block text-xs font-bold uppercase tracking-wider text-steel">
-                    WhatsApp
+                    WhatsApp · <span lang="ar" className="ar-inline">{ar.contact.whatsapp}</span>
                   </span>
                   <span className="block text-lg font-bold text-navy">
                     Chat With Us Now
@@ -76,7 +80,7 @@ export default function ContactPage() {
               </span>
               <span className="min-w-0">
                 <span className="block text-xs font-bold uppercase tracking-wider text-steel">
-                  Email
+                  Email · <span lang="ar" className="ar-inline">{ar.contact.email}</span>
                 </span>
                 <span className="block truncate text-sm font-bold text-navy">
                   {site.contact.email}
@@ -91,7 +95,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-steel">
-                    Registered Office
+                    Registered Office · <span lang="ar" className="ar-inline">{ar.contact.office}</span>
                   </p>
                   <p className="mt-1 text-sm font-medium leading-relaxed text-navy">
                     {site.contact.addressLines.map((l) => (
@@ -99,6 +103,9 @@ export default function ContactPage() {
                         {l}
                       </span>
                     ))}
+                  </p>
+                  <p lang="ar" className="ar mt-2 text-xs text-steel">
+                    {ar.contact.address}
                   </p>
                 </div>
               </div>
@@ -111,7 +118,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-steel">
-                    Working Hours
+                    Working Hours · <span lang="ar" className="ar-inline">{ar.contact.hours}</span>
                   </p>
                   <p className="mt-1 text-sm font-medium text-navy">
                     {site.contact.hours.map((h) => (
@@ -119,6 +126,9 @@ export default function ContactPage() {
                         <span className="text-steel">{h.days}:</span> {h.time}
                       </span>
                     ))}
+                  </p>
+                  <p lang="ar" className="ar mt-2 text-xs text-steel">
+                    {ar.contact.hoursLine}
                   </p>
                 </div>
               </div>

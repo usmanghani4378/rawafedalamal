@@ -9,6 +9,9 @@ import "@fontsource/inter/700.css";
 import "@fontsource/barlow-condensed/500.css";
 import "@fontsource/barlow-condensed/600.css";
 import "@fontsource/barlow-condensed/700.css";
+import "@fontsource/cairo/400.css";
+import "@fontsource/cairo/600.css";
+import "@fontsource/cairo/700.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

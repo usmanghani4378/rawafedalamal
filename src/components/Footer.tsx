@@ -4,6 +4,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Logo from "@/components/Logo";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,10 +15,16 @@ export default function Footer() {
         {/* brand */}
         <div>
           <Logo />
-          <p className="mt-4 text-sm leading-relaxed">
+          <p lang="ar" className="ar mt-3 text-lg font-bold text-white/90">
+            {ar.brand.name}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed">
             {site.brand.legalName} — a DED-licensed scrap &amp; metal waste trading
             company in Dubai. Fair weighing, instant payment, collection across the
             emirate.
+          </p>
+          <p lang="ar" className="ar mt-2 text-xs leading-relaxed text-gray-400">
+            {ar.footer.line}
           </p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-line bg-navy-light px-3 py-2 text-xs">
             <span className="h-2 w-2 rounded-full bg-eco" />

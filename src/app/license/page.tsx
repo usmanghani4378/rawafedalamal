@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import CTABand from "@/components/CTABand";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export const metadata: Metadata = {
   title: "License & Legal Details",
@@ -25,13 +26,16 @@ export default function LicensePage() {
       {/* banner */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">License &amp; Legal</span>
+          <span className="kicker">License &amp; Legal · <span lang="ar" className="ar-inline">الترخيص والبيانات القانونية</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Verify Us Before <span className="text-royal">You Sell</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             We&apos;re proud to be a registered, licensed business — and we encourage
             every customer to check. Here are our official details.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.license}
           </p>
         </div>
       </section>
@@ -56,44 +60,60 @@ export default function LicensePage() {
                 {
                   icon: Building2,
                   label: "Registered Company Name",
+                  labelAr: "الاسم المسجل للشركة",
                   value: site.brand.legalName.toUpperCase(),
+                  valueAr: ar.brand.legalName,
                 },
                 {
                   icon: BadgeCheck,
                   label: "Trade Licence Number",
+                  labelAr: "رقم الرخصة التجارية",
                   value: site.license.number,
+                  valueAr: "",
                 },
                 {
                   icon: Landmark,
                   label: "Issuing Authority",
+                  labelAr: "الجهة المُصدِرة",
                   value: site.license.issuer,
+                  valueAr: ar.license.issuer,
                 },
                 {
                   icon: ScrollText,
                   label: "Licensed Activity",
+                  labelAr: "النشاط المرخّص",
                   value: site.license.activity,
+                  valueAr: ar.license.activity,
                 },
                 {
                   icon: UserRound,
                   label: "Owner / Legal Representative",
+                  labelAr: "المالك / الممثل القانوني",
                   value: site.license.registeredOwner,
+                  valueAr: ar.license.owner,
                 },
                 {
                   icon: FileCheck2,
                   label: "Legal Form",
+                  labelAr: "الشكل القانوني",
                   value: site.license.legalForm,
+                  valueAr: ar.license.legalForm,
                 },
                 {
                   icon: MapPin,
                   label: "Registered Office",
+                  labelAr: "المكتب المسجّل",
                   value: site.contact.addressLines.join(", "),
+                  valueAr: ar.contact.address,
                 },
                 ...(site.license.municipalityPermit
                   ? [
                       {
                         icon: ShieldCheck,
                         label: "Dubai Municipality Waste Permit",
+                        labelAr: "تصريح بلدية دبي للنفايات",
                         value: site.license.municipalityPermit,
+                        valueAr: "",
                       },
                     ]
                   : []),
@@ -102,10 +122,22 @@ export default function LicensePage() {
                   key={row.label}
                   className="grid gap-1 px-7 py-4 sm:grid-cols-[280px_1fr] sm:gap-4"
                 >
-                  <dt className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-steel">
-                    <row.icon className="h-4 w-4 text-royal" /> {row.label}
+                  <dt className="text-xs font-bold uppercase tracking-wider text-steel">
+                    <span className="flex items-center gap-2">
+                      <row.icon className="h-4 w-4 text-royal" /> {row.label}
+                    </span>
+                    <span lang="ar" className="ar-inline mt-0.5 block pl-6 text-[0.7rem] normal-case tracking-normal text-steel/80">
+                      {row.labelAr}
+                    </span>
                   </dt>
-                  <dd className="text-sm font-medium text-ink">{row.value}</dd>
+                  <dd className="text-sm font-medium text-ink">
+                    {row.value}
+                    {row.valueAr && (
+                      <span lang="ar" className="ar mt-1 block text-xs text-steel">
+                        {row.valueAr}
+                      </span>
+                    )}
+                  </dd>
                 </div>
               ))}
             </dl>

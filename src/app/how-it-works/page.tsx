@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
+import { ar } from "@/data/bilingual";
 import { Icon } from "@/components/icons";
 import { steps, faqs } from "@/data/content";
 
@@ -25,13 +26,16 @@ export default function HowItWorksPage() {
       {/* banner */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">How It Works</span>
+          <span className="kicker">How It Works · <span lang="ar" className="ar-inline">كيف نعمل</span></span>
           <h1 className="heading-xl mt-3 text-white">
             From Call to Cash in <span className="text-royal">4 Steps</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             No accounts, no paperwork marathons, no waiting for transfers. This is how
             selling scrap should work.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.how}
           </p>
         </div>
       </section>

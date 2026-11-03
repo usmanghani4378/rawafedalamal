@@ -23,6 +23,7 @@
   /* Fonts (loaded in layout.tsx via @fontsource) */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Barlow Condensed", "Inter", ui-sans-serif, sans-serif;
+  --font-arabic: "Cairo", "Inter", ui-sans-serif, sans-serif;
 }
 
 /* ---------- Base ---------- */
@@ -253,6 +254,21 @@ body {
   color: var(--color-steel);
   line-height: 1.65;
   font-size: 0.95rem;
+}
+
+/* ---------- Arabic (bilingual text) ---------- */
+/* Block: full Arabic line/paragraph (right-to-left, Cairo font) */
+.ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+}
+/* Inline: Arabic words inside an English label, e.g. "Call Us · اتصل بنا" */
+.ar-inline {
+  font-family: var(--font-arabic);
+  unicode-bidi: isolate;
+  font-weight: 600;
 }
 
 /* Hero entrance animation */

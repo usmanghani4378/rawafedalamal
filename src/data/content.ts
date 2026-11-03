@@ -100,39 +100,33 @@ export const gallery: GalleryItem[] = [
     category: "Materials",
   },
   {
-    // TODO: replace with /images/gallery/aluminum-bales.jpg once generated
-    src: "/images/services/processing.jpg",
+    src: "/images/gallery/aluminum-bales.jpg",
     title: "Baled aluminum ready for recycling",
     category: "Yard",
   },
   {
-    // TODO: replace with /images/gallery/container-loading.jpg once generated
-    src: "/images/services/export.jpg",
+    src: "/images/gallery/container-loading.jpg",
     title: "Container loading for export",
     category: "Export",
   },
   {
-    // TODO: replace with /images/gallery/yard-organization.jpg once generated
-    src: "/images/about-yard.jpg",
+    src: "/images/gallery/yard-organization.jpg",
     title: "Sorted & organized scrap yard",
     category: "Yard",
   },
   {
-    // TODO: replace with /images/gallery/truck-fleet.jpg once generated
-    src: "/images/services/collection.jpg",
+    src: "/images/gallery/truck-fleet.jpg",
     title: "Collection fleet heading to site",
     category: "Collections",
   },
   {
-    // TODO: replace with /images/gallery/ac-units.jpg once generated
-    src: "/images/services/buying.jpg",
-    title: "Weighbridge — every load weighed & paid",
-    category: "Collections",
+    src: "/images/gallery/ac-units.jpg",
+    title: "AC units & white metal ready for processing",
+    category: "Materials",
   },
   {
-    // TODO: replace with /images/gallery/brass-radiators.jpg once generated
-    src: "/images/gallery/copper-cable.jpg",
-    title: "Sorted non-ferrous metals",
+    src: "/images/gallery/brass-radiators.jpg",
+    title: "Brass radiators — sorted non-ferrous",
     category: "Materials",
   },
 ];

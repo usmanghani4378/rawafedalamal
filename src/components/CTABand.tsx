@@ -4,13 +4,18 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { WhatsAppGlyph } from "@/components/WhatsAppFloat";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export default function CTABand({
   title = "Got Scrap? Get Today's Rate.",
+  titleAr = ar.cta.title,
   text = "One call or message is all it takes — tell us what you have and where it is, and we handle the rest.",
+  textAr = ar.cta.text,
 }: {
   title?: string;
+  titleAr?: string;
   text?: string;
+  textAr?: string;
 }) {
   return (
     <section className="relative overflow-hidden">
@@ -24,7 +29,17 @@ export default function CTABand({
       <div className="absolute inset-0 bg-navy/85" />
       <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
         <h2 className="heading-lg text-white">{title}</h2>
+        {titleAr && (
+          <p lang="ar" className="ar mt-2 text-2xl font-bold text-blue-200/90">
+            {titleAr}
+          </p>
+        )}
         <p className="mx-auto mt-4 max-w-xl text-gray-300">{text}</p>
+        {textAr && (
+          <p lang="ar" className="ar mx-auto mt-2 max-w-xl text-blue-100/60">
+            {textAr}
+          </p>
+        )}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link href="/contact" className="btn btn-primary">
             Get a Free Quote

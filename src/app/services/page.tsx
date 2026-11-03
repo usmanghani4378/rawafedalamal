@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
+import { ar } from "@/data/bilingual";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 
@@ -19,13 +20,16 @@ export default function ServicesPage() {
       {/* banner */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">Our Services</span>
+          <span className="kicker">Our Services · <span lang="ar" className="ar-inline">خدماتنا</span></span>
           <h1 className="heading-xl mt-3 text-white">
             Everything Your Scrap <span className="text-royal">Needs</span>
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Five services, one licensed partner — from the first phone call to the final
             payment or shipped container.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.services}
           </p>
         </div>
       </section>

@@ -1,13 +1,16 @@
-/* Reusable section heading: amber kicker + big condensed title + optional intro */
+/* Reusable section heading: accent kicker + big condensed title + optional
+   Arabic title + optional intro */
 export default function SectionHeading({
   kicker,
   title,
+  titleAr,
   intro,
   center = false,
   dark = false,
 }: {
   kicker: string;
   title: string;
+  titleAr?: string;
   intro?: string;
   center?: boolean;
   dark?: boolean;
@@ -20,6 +23,14 @@ export default function SectionHeading({
       >
         {title}
       </h2>
+      {titleAr && (
+        <p
+          lang="ar"
+          className={`ar mt-1 text-xl font-bold ${dark ? "text-blue-200/80" : "text-steel"}`}
+        >
+          {titleAr}
+        </p>
+      )}
       {intro && (
         <p className={`mt-4 leading-relaxed ${dark ? "text-gray-400" : "text-steel"}`}>
           {intro}

@@ -9,6 +9,7 @@ import { Mail, Send } from "lucide-react";
 import { WhatsAppGlyph } from "@/components/WhatsAppFloat";
 import { materialCategories } from "@/data/services";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 
 export default function QuoteForm() {
   const [sent, setSent] = useState(false);
@@ -55,13 +56,13 @@ export default function QuoteForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="qf-name" className="label">
-            Your Name *
+            Your Name * · <span lang="ar" className="ar-inline">{ar.form.name}</span>
           </label>
           <input id="qf-name" name="name" required className="input" placeholder="e.g. Ahmed Khan" />
         </div>
         <div>
           <label htmlFor="qf-phone" className="label">
-            Phone / WhatsApp *
+            Phone / WhatsApp * · <span lang="ar" className="ar-inline">{ar.form.phone}</span>
           </label>
           <input
             id="qf-phone"
@@ -74,7 +75,7 @@ export default function QuoteForm() {
         </div>
         <div>
           <label htmlFor="qf-material" className="label">
-            Material Type *
+            Material Type * · <span lang="ar" className="ar-inline">{ar.form.material}</span>
           </label>
           <select id="qf-material" name="material" required className="input" defaultValue="">
             <option value="" disabled>
@@ -107,7 +108,7 @@ export default function QuoteForm() {
         </div>
         <div>
           <label htmlFor="qf-quantity" className="label">
-            Approx. Quantity *
+            Approx. Quantity * · <span lang="ar" className="ar-inline">{ar.form.quantity}</span>
           </label>
           <input
             id="qf-quantity"
@@ -119,7 +120,7 @@ export default function QuoteForm() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="qf-location" className="label">
-            Pickup Location *
+            Pickup Location * · <span lang="ar" className="ar-inline">{ar.form.location}</span>
           </label>
           <input
             id="qf-location"
@@ -131,7 +132,7 @@ export default function QuoteForm() {
         </div>
         <div className="sm:col-span-2">
           <label htmlFor="qf-message" className="label">
-            Details (optional)
+            Details (optional) · <span lang="ar" className="ar-inline">{ar.form.details}</span>
           </label>
           <textarea
             id="qf-message"
@@ -144,7 +145,7 @@ export default function QuoteForm() {
       </div>
 
       <button type="submit" className="btn btn-primary mt-6 w-full">
-        <Send className="h-4 w-4" /> Request My Quote
+        <Send className="h-4 w-4" /> Request My Quote · <span lang="ar" className="ar-inline">{ar.form.submit}</span>
       </button>
 
       {sent && (

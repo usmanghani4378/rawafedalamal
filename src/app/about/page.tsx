@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Eye, HeartHandshake, Leaf, ShieldCheck } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
+import { ar } from "@/data/bilingual";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -19,11 +20,14 @@ export default function AboutPage() {
         <Image src={site.images.about} alt="" fill className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-navy/85" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6">
-          <span className="kicker">About Us</span>
+          <span className="kicker">About Us · <span lang="ar" className="ar-inline">من نحن</span></span>
           <h1 className="heading-xl mt-3 text-white">The Company Behind the Trucks</h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             A registered Dubai business doing scrap the right way — licensed, transparent
             and built for long-term relationships.
+          </p>
+          <p lang="ar" className="ar mt-3 max-w-2xl text-lg text-blue-100/70">
+            {ar.banners.about}
           </p>
         </div>
       </section>

@@ -16,6 +16,7 @@ import CTABand from "@/components/CTABand";
 import GalleryGrid from "@/components/GalleryGrid";
 import { Icon } from "@/components/icons";
 import { site } from "@/data/site";
+import { ar } from "@/data/bilingual";
 import { services, materialCategories } from "@/data/services";
 import { steps, reasons, gallery, testimonials } from "@/data/content";
 
@@ -44,6 +45,12 @@ export default function HomePage() {
               {site.brand.legalName} is a licensed Dubai company buying ferrous and
               non-ferrous scrap from contractors, factories, dealers and households —
               with pickup across the emirate and same-day payment.
+            </p>
+            <p
+              lang="ar"
+              className="ar fade-up fade-up-2 mt-3 max-w-xl text-lg text-blue-100/70"
+            >
+              {ar.hero.paragraph}
             </p>
             <div className="fade-up fade-up-3 mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="btn btn-primary">
@@ -74,12 +81,17 @@ export default function HomePage() {
       {/* ═══════════ 2) TRUST / STATS BAND ═══════════ */}
       <section className="bg-royal">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4">
-          {site.stats.map((s) => (
+          {site.stats.map((s, i) => (
             <div key={s.label} className="text-center lg:text-left">
               <p className="font-display text-3xl font-bold uppercase text-navy sm:text-4xl">
                 {s.value}
               </p>
               <p className="mt-1 text-sm font-semibold text-navy/75">{s.label}</p>
+              {ar.stats[i] && (
+                <p lang="ar" className="ar-inline text-xs font-bold text-navy/60">
+                  {ar.stats[i]}
+                </p>
+              )}
             </div>
           ))}
         </div>
@@ -92,6 +104,7 @@ export default function HomePage() {
             <SectionHeading
               kicker="What We Do"
               title="Complete Scrap Metal Services"
+              titleAr={ar.sections.services}
               intro="From a single pickup load to full container exports — one licensed partner for everything your scrap needs."
             />
             <Link
@@ -144,6 +157,7 @@ export default function HomePage() {
             center
             kicker="Materials We Buy"
             title="If It's Metal, We'll Buy It"
+            titleAr={ar.sections.materials}
             intro="We purchase the full range of ferrous and non-ferrous metals — sorted or mixed, any quantity."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -189,6 +203,7 @@ export default function HomePage() {
             center
             kicker="How It Works"
             title="Scrap Gone in 4 Simple Steps"
+            titleAr={ar.sections.how}
           />
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
@@ -228,6 +243,7 @@ export default function HomePage() {
             dark
             kicker="Why Rawafed Alamal"
             title="The Licensed Way to Sell Your Scrap"
+            titleAr={ar.sections.why}
             intro="Anyone with a pickup truck can offer to buy your metal. Here's what you get with a registered Dubai trading company."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -270,6 +286,7 @@ export default function HomePage() {
             <SectionHeading
               kicker="About Us"
               title="A Dubai Scrap House You Can Verify"
+              titleAr={ar.sections.about}
               intro={`${site.brand.legalName} is a registered single-owner limited liability company based in Deira, Dubai, trading scrap and metal waste under DED licence ${site.license.number}.`}
             />
             <ul className="mt-6 space-y-3">
@@ -304,6 +321,7 @@ export default function HomePage() {
             <SectionHeading
               kicker="Our Work"
               title="Recent Collections & Yard Work"
+              titleAr={ar.sections.gallery}
             />
             <Link
               href="/gallery"
