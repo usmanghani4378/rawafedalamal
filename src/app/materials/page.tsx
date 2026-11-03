@@ -21,7 +21,7 @@ export default function MaterialsPage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Materials We Buy · <span lang="ar" className="ar-inline">المواد التي نشتريها</span></span>
           <h1 className="heading-xl mt-3 text-white">
-            If It&apos;s Metal, <span className="text-royal">It&apos;s Money</span>
+            If It&apos;s Metal, It&apos;s Money
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             The complete list of what we buy — sorted or mixed, any quantity, collected
@@ -83,7 +83,7 @@ export default function MaterialsPage() {
             {/* rates disclaimer */}
             <div className="card p-7">
               <h3 className="flex items-center gap-2.5 font-display text-xl font-semibold uppercase text-navy">
-                <AlertTriangle className="h-5 w-5 text-royal" /> About Rates &amp; Prices
+                <AlertTriangle className="h-5 w-5 text-navy" /> About Rates &amp; Prices
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-steel">
                 {materialsDisclaimer}

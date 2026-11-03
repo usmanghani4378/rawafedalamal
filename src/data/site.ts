@@ -99,7 +99,7 @@ export const site = {
   --------------------------------------------------------------- */
   seo: {
     // ⚠️ Change to your real domain when it's live, e.g. "https://rawafedalamal.ae"
-    siteUrl: "https://www.rawafedalamal.com",
+    siteUrl: "https://rawafedalamal.vercel.app",
     title:
       "Rawafed Alamal Scrap & Metal Waste Trading L.L.C | Licensed Scrap Buyers in Dubai",
     description:
@@ -129,9 +129,19 @@ export const site = {
   },
 
   /* ---------------------------------------------------------------
-     7) NAVIGATION MENU — pages listed in the header & footer
+     7) NAVIGATION — header shows the 5 main pages (logo click = Home);
+        the full list appears in the footer & mobile menu.
   --------------------------------------------------------------- */
   nav: [
+    { label: "Services", href: "/services" },
+    { label: "Materials", href: "/materials" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ],
+
+  // Full page list used in the footer & mobile menu
+  footerNav: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },

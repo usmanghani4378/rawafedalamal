@@ -28,7 +28,7 @@ export default function LicensePage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">License &amp; Legal · <span lang="ar" className="ar-inline">الترخيص والبيانات القانونية</span></span>
           <h1 className="heading-xl mt-3 text-white">
-            Verify Us Before <span className="text-royal">You Sell</span>
+            Verify Us Before You Sell
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             We&apos;re proud to be a registered, licensed business — and we encourage
@@ -124,7 +124,7 @@ export default function LicensePage() {
                 >
                   <dt className="text-xs font-bold uppercase tracking-wider text-steel">
                     <span className="flex items-center gap-2">
-                      <row.icon className="h-4 w-4 text-royal" /> {row.label}
+                      <row.icon className="h-4 w-4 text-navy" /> {row.label}
                     </span>
                     <span lang="ar" className="ar-inline mt-0.5 block pl-6 text-[0.7rem] normal-case tracking-normal text-steel/80">
                       {row.labelAr}
@@ -167,7 +167,7 @@ export default function LicensePage() {
           </div>
 
           {/* vendor note */}
-          <div className="mx-auto mt-10 max-w-5xl rounded-xl border border-royal/40 bg-royal/10 p-6 text-sm leading-relaxed text-ink">
+          <div className="mx-auto mt-10 max-w-5xl rounded-xl border border-gray-200 bg-white p-6 text-sm leading-relaxed text-ink">
             <strong>For contractors &amp; procurement teams:</strong> we regularly
             complete vendor-onboarding for main contractors and government suppliers.
             <Link href="/contact" className="ml-1 inline-flex items-center gap-1 font-semibold text-royal hover:text-royal-dark">

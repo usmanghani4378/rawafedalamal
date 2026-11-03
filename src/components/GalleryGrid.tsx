@@ -18,6 +18,14 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
     [filter, items]
   );
 
+  // lock page scroll while the lightbox is open
+  useEffect(() => {
+    document.body.style.overflow = selected !== null ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selected]);
+
   // keyboard controls for the lightbox
   useEffect(() => {
     if (selected === null) return;
@@ -73,7 +81,7 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
             />
             <span className="absolute inset-0 bg-gradient-to-t from-navy/85 via-transparent to-transparent opacity-90" />
             <span className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-royal">
+              <span className="block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/75">
                 {item.category}
               </span>
               <span className="block text-sm font-semibold leading-snug text-white">
@@ -127,7 +135,7 @@ export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
               alt={visible[selected].title}
               width={1200}
               height={900}
-              className="max-h-[78vh] w-auto rounded-lg object-contain"
+              className="max-h-[60vh] w-auto rounded-lg object-contain sm:max-h-[78vh]"
             />
             <figcaption className="mt-3 text-center text-sm text-gray-300">
               {visible[selected].title}

@@ -84,13 +84,15 @@ then open `src/data/content.ts` and add one entry to the `gallery` list:
 
 ## 5. Using your own logo
 
-The current logo is a built-in amber mark with the brand name text.
-To use a real logo image:
+The site already uses **`public/images/logo.png`** (your uploaded logo, optimized).
+To change it:
 
-1. Put your file at `public/images/logo.png` (transparent PNG looks best)
-2. In `src/components/Logo.tsx`, replace the `<LogoMark … />` line with:
-   `<Image src="/images/logo.png" alt={site.brand.name} width={40} height={40} />`
-   (add `import Image from "next/image";` at the top of that file)
+1. Replace `public/images/logo.png` with a new square, transparent PNG
+   (512×512 px is ideal)
+2. Also replace `src/app/icon.png` (48×48) — the browser-tab icon
+3. That's it — header, footer and favicon all update.
+
+The original files are kept in `brand-assets/` (full-size PNG + SVG vector).
 
 ## 6. Running the site
 
