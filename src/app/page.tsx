@@ -26,8 +26,8 @@ import { steps, reasons, gallery, testimonials } from "@/data/content";
 export default function HomePage() {
   return (
     <>
-      {/* ═══════════ 1) HERO — bright wallpaper, centred, no box ═══════════ */}
-      <section className="relative flex min-h-[78vh] items-start justify-center md:min-h-[88vh]">
+      {/* ═══════════ 1) HERO — bright wallpaper under a full-bleed frost ═══════════ */}
+      <section className="relative flex min-h-[78vh] items-start justify-center overflow-hidden md:min-h-[88vh]">
         <Image
           src={site.images.hero}
           alt="Rawafed Alamal scrap metal yard in Dubai"
@@ -36,21 +36,27 @@ export default function HomePage() {
           className="hero-zoom object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/90" />
+        {/* frosted layer — covers the whole hero edge-to-edge, no gaps */}
+        <div className="hero-frost absolute inset-0 bg-navy/45" />
+        {/* depth gradient for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-transparent to-navy/90" />
         <div className="relative mx-auto w-full max-w-4xl px-4 pb-28 pt-24 text-center sm:px-6 sm:pt-28 md:pt-32">
           <div className="fade-up">
-            <p className="kicker kicker--center justify-center drop-shadow">
+            <p className="kicker kicker--center justify-center">
               {site.brand.tagline}
             </p>
             <h1
-              className="heading-xl mt-5 text-white drop-shadow-lg"
+              className="heading-xl mt-5 text-white drop-shadow-[0_4px_24px_rgba(10,28,54,0.65)]"
               style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
             >
-              {site.brand.name}
+              {site.brand.name.split(" ")[0]}{" "}
+              <span className="text-royal drop-shadow-[0_4px_24px_rgba(10,28,54,0.65)]">
+                {site.brand.name.split(" ").slice(1).join(" ")}
+              </span>
             </h1>
             <p
               lang="ar"
-              className="ar mt-3 text-base font-bold text-white/95 drop-shadow sm:text-xl"
+              className="ar mt-3 text-base font-bold text-white/95 sm:text-xl"
             >
               {ar.brand.legalName}
             </p>
