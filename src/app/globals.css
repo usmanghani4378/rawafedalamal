@@ -1,0 +1,299 @@
+/* ==========================================================================
+   🎨 DESIGN SYSTEM + GLOBAL STYLES
+   ==========================================================================
+   Colours and fonts are defined here as CSS variables and wired into
+   Tailwind v4. Change a hex code here and the whole site follows.
+   ========================================================================== */
+
+@import "tailwindcss";
+
+@theme {
+  /* Brand colours — navy & royal blue theme */
+  --color-navy: #0a1c36; /* darkest — header, footer, dark sections, headings */
+  --color-navy-light: #13294b; /* cards & panels on dark sections */
+  --color-line: #1e3c6d; /* borders on dark backgrounds */
+  --color-royal: #1f6feb; /* PRIMARY ACCENT — buttons, links, highlights */
+  --color-royal-dark: #1858c4; /* accent hover state */
+  --color-eco: #2e9e5b; /* green — recycling / success cues */
+  --color-mist: #f3f6fb; /* light page background */
+  --color-paper: #ffffff; /* cards on light sections */
+  --color-ink: #1b2534; /* body text on light */
+  --color-steel: #5d6c84; /* muted text */
+
+  /* Fonts (loaded in layout.tsx via @fontsource) */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Inter", ui-sans-serif, sans-serif;
+  --font-arabic: "Cairo", "Inter", ui-sans-serif, sans-serif;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-mist);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-royal);
+  color: var(--color-navy);
+}
+
+/* ---------- Reusable component classes ---------- */
+
+/* Royal accent section label, e.g. "— WHAT WE DO" */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-royal);
+}
+.kicker::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: var(--color-royal);
+}
+.kicker--center::after {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: var(--color-royal);
+}
+
+/* Big condensed headings */
+.heading-xl {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  font-size: clamp(2.4rem, 6vw, 4.3rem);
+}
+.heading-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+}
+.heading-sm {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 1.35rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 0.55rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.btn-primary {
+  background: var(--color-royal);
+  color: var(--color-navy);
+}
+.btn-primary:hover {
+  background: var(--color-royal-dark);
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--color-navy);
+  color: #fff;
+}
+.btn-dark:hover {
+  background: var(--color-navy-light);
+  transform: translateY(-2px);
+}
+.btn-outline-light {
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+.btn-outline-light:hover {
+  border-color: var(--color-royal);
+  color: var(--color-royal);
+  transform: translateY(-2px);
+}
+.btn-eco {
+  background: var(--color-eco);
+  color: #fff;
+}
+.btn-eco:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+  background: var(--color-paper);
+  border: 1px solid #e6e9ee;
+  border-radius: 0.9rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(23, 27, 34, 0.1);
+}
+.card-dark {
+  background: var(--color-navy-light);
+  border: 1px solid var(--color-line);
+  border-radius: 0.9rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.card-dark:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-royal);
+}
+
+/* Icon square used in cards */
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.7rem;
+  background: rgba(31, 111, 235, 0.12);
+  color: var(--color-royal);
+  flex-shrink: 0;
+}
+.icon-box--solid {
+  background: var(--color-royal);
+  color: var(--color-navy);
+}
+
+/* Form inputs */
+.input {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #d9dee6;
+  border-radius: 0.55rem;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-royal);
+  box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.18);
+}
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-steel);
+  margin-bottom: 0.35rem;
+}
+
+/* Chips / badges */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+/* FAQ accordion (pure HTML <details>) */
+.faq details {
+  border-bottom: 1px solid #e6e9ee;
+}
+.faq summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  padding: 1.1rem 0.25rem;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-royal);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq .faq-a {
+  padding: 0 0.25rem 1.15rem;
+  color: var(--color-steel);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+/* ---------- Arabic (bilingual text) ---------- */
+/* Block: full Arabic line/paragraph (right-to-left, Cairo font) */
+.ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  unicode-bidi: isolate;
+  line-height: 1.9;
+}
+/* Inline: Arabic words inside an English label, e.g. "Call Us · اتصل بنا" */
+.ar-inline {
+  font-family: var(--font-arabic);
+  unicode-bidi: isolate;
+  font-weight: 600;
+}
+
+/* Hero entrance animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+.fade-up-1 {
+  animation-delay: 0.08s;
+}
+.fade-up-2 {
+  animation-delay: 0.18s;
+}
+.fade-up-3 {
+  animation-delay: 0.3s;
+}
+.fade-up-4 {
+  animation-delay: 0.42s;
+}
