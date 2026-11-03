@@ -76,7 +76,7 @@ export default function Header() {
             </a>
             <Link
               href="/contact"
-              className="btn btn-primary whitespace-nowrap !px-4 !py-2.5 text-sm"
+              className="btn btn-primary hidden whitespace-nowrap !px-4 !py-2.5 text-sm lg:inline-flex"
             >
               Get a Quote
             </Link>
@@ -121,9 +121,13 @@ export default function Header() {
                   </Link>
                 ))}
             </div>
+            {/* primary CTA inside the mobile menu */}
+            <Link href="/contact" className="btn btn-primary mt-4 w-full">
+              Get a Quote
+            </Link>
             <a
               href={`tel:${site.contact.phoneHref}`}
-              className="mt-5 flex items-center justify-center gap-2 rounded-lg bg-navy-light py-3.5 text-base font-semibold text-white"
+              className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-navy-light py-3.5 text-base font-semibold text-white"
             >
               <Phone className="h-5 w-5 text-royal" /> {site.contact.phoneDisplay}
             </a>
