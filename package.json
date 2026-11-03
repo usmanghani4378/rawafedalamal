@@ -1,0 +1,28 @@
+{
+  "name": "rawafedalamal-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Rawafed Alamal Scrap & Metal Waste Trading L.L.C - licensed scrap metal traders in Dubai, UAE",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0"
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "^5.0.0",
+    "@fontsource/inter": "^5.0.0",
+    "lucide-react": "^0.475.0",
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.5.0"
+  }
+}
