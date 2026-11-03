@@ -26,8 +26,8 @@ import { steps, reasons, gallery, testimonials } from "@/data/content";
 export default function HomePage() {
   return (
     <>
-      {/* ═══════════ 1) HERO — bright wallpaper, centred glass panel ═══════════ */}
-      <section className="relative flex min-h-[82vh] items-center justify-center md:min-h-[94vh]">
+      {/* ═══════════ 1) HERO — bright wallpaper, centred, no box ═══════════ */}
+      <section className="relative flex min-h-[78vh] items-start justify-center md:min-h-[88vh]">
         <Image
           src={site.images.hero}
           alt="Rawafed Alamal scrap metal yard in Dubai"
@@ -36,21 +36,21 @@ export default function HomePage() {
           className="hero-zoom object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/35 via-navy/30 to-navy/85" />
-        <div className="relative mx-auto w-full max-w-4xl px-4 py-16 text-center sm:px-6 md:py-20">
-          <div className="fade-up rounded-3xl bg-navy/50 px-5 py-10 ring-1 ring-white/15 backdrop-blur-md sm:px-10 sm:py-12">
-            <p className="kicker kicker--center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/30 to-navy/90" />
+        <div className="relative mx-auto w-full max-w-4xl px-4 pb-28 pt-24 text-center sm:px-6 sm:pt-28 md:pt-32">
+          <div className="fade-up">
+            <p className="kicker kicker--center justify-center drop-shadow">
               {site.brand.tagline}
             </p>
             <h1
-              className="heading-xl mt-5 text-white"
+              className="heading-xl mt-5 text-white drop-shadow-lg"
               style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
             >
               {site.brand.name}
             </h1>
             <p
               lang="ar"
-              className="ar mt-3 text-base font-bold text-white/95 sm:text-xl"
+              className="ar mt-3 text-base font-bold text-white/95 drop-shadow sm:text-xl"
             >
               {ar.brand.legalName}
             </p>
@@ -131,8 +131,11 @@ export default function HomePage() {
 
           <div className="mt-8 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 90}>
-                <Link href={`/services/${s.slug}`} className="card group block p-5 sm:p-6">
+              <Reveal key={s.slug} delay={(i % 3) * 90} className="h-full">
+                <Link
+                  href={`/services/${s.slug}`}
+                  className="card group flex h-full flex-col p-5 sm:p-6"
+                >
                   <span className="icon-box">
                     <Icon name={s.icon} className="h-6 w-6" />
                   </span>
@@ -140,17 +143,17 @@ export default function HomePage() {
                     {s.title}
                   </h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-steel">{s.short}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-royal">
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-royal">
                     Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
               </Reveal>
             ))}
             {/* CTA card */}
-            <Reveal delay={180}>
+            <Reveal delay={180} className="h-full">
               <div className="card flex h-full flex-col justify-between bg-navy p-5 sm:p-6">
                 <div>
-                  <span className="icon-box icon-box--solid">
+                  <span className="icon-box !bg-white/10 !text-white">
                     <Phone className="h-6 w-6" />
                   </span>
                   <h3 className="heading-sm mt-5 text-white">Not Sure What You Have?</h3>
