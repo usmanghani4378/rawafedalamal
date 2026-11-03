@@ -23,8 +23,8 @@ import { steps, reasons, gallery, testimonials } from "@/data/content";
 export default function HomePage() {
   return (
     <>
-      {/* ═══════════ 1) HERO ═══════════ */}
-      <section className="relative flex min-h-[88vh] items-center">
+      {/* ═══════════ 1) HERO — heading, buttons, chips. No fluff. ═══════════ */}
+      <section className="relative flex min-h-[72vh] items-center md:min-h-[85vh]">
         <Image
           src={site.images.hero}
           alt="Rawafed Alamal scrap metal yard in Dubai"
@@ -34,25 +34,19 @@ export default function HomePage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40" />
-        <div className="relative mx-auto w-full max-w-7xl px-4 py-24 sm:px-6">
+        <div className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 md:py-24">
           <div className="max-w-2xl">
             <p className="fade-up kicker">{site.brand.tagline}</p>
             <h1 className="fade-up fade-up-1 heading-xl mt-4 text-white">
-              We Buy Your Scrap Metal.{" "}
-              <span className="text-royal">Fairly Weighed. Instantly Paid.</span>
+              We Buy Your Scrap Metal. Fairly Weighed. Instantly Paid.
             </h1>
-            <p className="fade-up fade-up-2 mt-6 max-w-xl text-lg leading-relaxed text-gray-300">
-              {site.brand.legalName} is a licensed Dubai company buying ferrous and
-              non-ferrous scrap from contractors, factories, dealers and households —
-              with pickup across the emirate and same-day payment.
-            </p>
             <p
               lang="ar"
-              className="ar fade-up fade-up-2 mt-3 max-w-xl text-lg text-blue-100/70"
+              className="ar fade-up fade-up-2 mt-3 text-base font-semibold text-gray-300"
             >
-              {ar.hero.paragraph}
+              {ar.brand.legalName}
             </p>
-            <div className="fade-up fade-up-3 mt-8 flex flex-wrap gap-3">
+            <div className="fade-up fade-up-2 mt-7 flex flex-wrap gap-3">
               <Link href="/contact" className="btn btn-primary">
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </Link>
@@ -60,17 +54,17 @@ export default function HomePage() {
                 <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
               </a>
             </div>
-            <div className="fade-up fade-up-4 mt-9 flex flex-wrap gap-2.5">
+            <div className="fade-up fade-up-3 mt-8 flex flex-wrap gap-2.5">
               <span className="chip">
-                <BadgeCheck className="h-4 w-4 text-royal" />
-                DED Licence {site.license.number}
+                <BadgeCheck className="h-4 w-4 text-gray-300" />DED Licence{" "}
+                {site.license.number}
               </span>
               <span className="chip">
-                <ShieldCheck className="h-4 w-4 text-royal" />
+                <ShieldCheck className="h-4 w-4 text-gray-300" />
                 Municipality Compliant
               </span>
               <span className="chip">
-                <MapPin className="h-4 w-4 text-royal" />
+                <MapPin className="h-4 w-4 text-gray-300" />
                 Pickup Across Dubai
               </span>
             </div>
@@ -79,16 +73,16 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ 2) TRUST / STATS BAND ═══════════ */}
-      <section className="bg-royal">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4">
+      <section className="border-y border-line bg-navy">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 gap-y-6 px-4 py-9 sm:px-6 lg:grid-cols-4">
           {site.stats.map((s, i) => (
             <div key={s.label} className="text-center lg:text-left">
-              <p className="font-display text-3xl font-bold uppercase text-navy sm:text-4xl">
+              <p className="font-display text-3xl font-bold uppercase text-white sm:text-4xl">
                 {s.value}
               </p>
-              <p className="mt-1 text-sm font-semibold text-navy/75">{s.label}</p>
+              <p className="mt-1 text-sm font-semibold text-gray-300">{s.label}</p>
               {ar.stats[i] && (
-                <p lang="ar" className="ar-inline text-xs font-bold text-navy/60">
+                <p lang="ar" className="ar-inline text-xs font-bold text-gray-400">
                   {ar.stats[i]}
                 </p>
               )}
@@ -210,14 +204,14 @@ export default function HomePage() {
               <div key={step.title} className="relative">
                 {/* connector line */}
                 {i < steps.length - 1 && (
-                  <span className="absolute left-[calc(50%+3rem)] top-8 hidden h-0.5 w-[calc(100%-6rem)] bg-gradient-to-r from-royal/60 to-transparent lg:block" />
+                  <span className="absolute left-[calc(50%+3rem)] top-8 hidden h-0.5 w-[calc(100%-6rem)] bg-gradient-to-r from-gray-300 to-transparent lg:block" />
                 )}
                 <div className="flex flex-col items-center text-center">
                   <div className="relative">
                     <span className="icon-box icon-box--solid h-16 w-16 !rounded-2xl">
                       <Icon name={step.icon} className="h-8 w-8" />
                     </span>
-                    <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-navy font-display text-sm font-bold text-royal ring-2 ring-mist">
+                    <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-navy font-display text-sm font-bold text-white ring-2 ring-mist">
                       {i + 1}
                     </span>
                   </div>
@@ -273,7 +267,7 @@ export default function HomePage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-6 -right-2 rounded-xl bg-royal px-6 py-5 shadow-xl sm:right-6">
+            <div className="absolute -bottom-6 right-4 rounded-xl bg-navy px-6 py-5 shadow-xl sm:right-6">
               <p className="font-display text-2xl font-bold uppercase leading-none text-navy">
                 Dubai
               </p>
@@ -344,13 +338,13 @@ export default function HomePage() {
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {testimonials.map((t) => (
                 <figure key={t.name} className="card p-7">
-                  <Quote className="h-7 w-7 text-royal" />
+                  <Quote className="h-7 w-7 text-navy" />
                   <blockquote className="mt-4 text-sm leading-relaxed text-ink">
                     {t.text}
                   </blockquote>
                   <figcaption className="mt-5 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-royal text-royal" />
+                      <Star key={i} className="h-4 w-4 fill-navy text-navy" />
                     ))}
                   </figcaption>
                   <p className="mt-2 text-sm font-semibold text-navy">{t.name}</p>

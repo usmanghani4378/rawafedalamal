@@ -40,18 +40,15 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="mt-4 space-y-2.5 text-sm">
-            {site.nav.slice(1, 6).map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="transition-colors hover:text-royal">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link href="/license" className="transition-colors hover:text-royal">
-                License &amp; Legal
-              </Link>
-            </li>
+            {site.footerNav
+              .filter((i) => i.href !== "/")
+              .map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="transition-colors hover:text-royal">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
 

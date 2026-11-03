@@ -74,7 +74,7 @@ export default async function ServiceDetailPage({
               ))}
             </ul>
 
-            <div className="mt-10 rounded-xl border border-royal/40 bg-royal/10 p-6">
+            <div className="mt-10 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
               <h3 className="heading-sm text-navy">Have material for this service?</h3>
               <p className="mt-2 text-sm text-steel">
                 Send your list and location — we reply with today&apos;s rate and the

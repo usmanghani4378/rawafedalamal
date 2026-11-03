@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
           <span className="kicker">Contact Us · <span lang="ar" className="ar-inline">{ar.contact.call}</span></span>
           <h1 className="heading-xl mt-3 text-white">
-            Get Your <span className="text-royal">Free Quote</span>
+            Get Your Free Quote
           </h1>
           <p className="mt-4 max-w-2xl text-gray-300">
             Tell us what scrap you have and where it is — we&apos;ll come back with
@@ -134,7 +134,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-royal/40 bg-royal/10 p-5 text-sm leading-relaxed text-ink">
+            <div className="rounded-xl border border-gray-200 bg-white p-5 text-sm leading-relaxed text-ink shadow-sm">
               <strong>Contractor or factory?</strong> Ask about account terms and
               scheduled weekly collections.
             </div>
@@ -158,6 +158,7 @@ export default function ContactPage() {
               )}&z=15&output=embed`}
               width="100%"
               height="420"
+              className="h-[300px] w-full sm:h-[420px]"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

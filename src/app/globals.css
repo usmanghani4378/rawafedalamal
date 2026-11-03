@@ -15,10 +15,10 @@
   --color-royal: #1f6feb; /* PRIMARY ACCENT — buttons, links, highlights */
   --color-royal-dark: #1858c4; /* accent hover state */
   --color-eco: #2e9e5b; /* green — recycling / success cues */
-  --color-mist: #f3f6fb; /* light page background */
+  --color-mist: #f4f6f8; /* light page background */
   --color-paper: #ffffff; /* cards on light sections */
-  --color-ink: #1b2534; /* body text on light */
-  --color-steel: #5d6c84; /* muted text */
+  --color-ink: #3a4450; /* body text on light */
+  --color-steel: #6b7280; /* muted text */
 
   /* Fonts (loaded in layout.tsx via @fontsource) */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -54,7 +54,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-royal);
+  color: var(--color-steel);
 }
 .kicker::before {
   content: "";
@@ -71,6 +71,7 @@ body {
 
 /* Big condensed headings */
 .heading-xl {
+  text-wrap: balance;
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
@@ -79,6 +80,7 @@ body {
   font-size: clamp(2.4rem, 6vw, 4.3rem);
 }
 .heading-lg {
+  text-wrap: balance;
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
@@ -86,6 +88,7 @@ body {
   font-size: clamp(1.9rem, 4vw, 2.9rem);
 }
 .heading-sm {
+  text-wrap: balance;
   font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
@@ -160,7 +163,7 @@ body {
 }
 .card-dark:hover {
   transform: translateY(-4px);
-  border-color: var(--color-royal);
+  border-color: #3a5583;
 }
 
 /* Icon square used in cards */
@@ -171,13 +174,13 @@ body {
   width: 3rem;
   height: 3rem;
   border-radius: 0.7rem;
-  background: rgba(31, 111, 235, 0.12);
-  color: var(--color-royal);
+  background: #edf0f4;
+  color: var(--color-navy);
   flex-shrink: 0;
 }
 .icon-box--solid {
-  background: var(--color-royal);
-  color: var(--color-navy);
+  background: var(--color-navy);
+  color: #ffffff;
 }
 
 /* Form inputs */
@@ -242,7 +245,7 @@ body {
   content: "+";
   font-size: 1.4rem;
   font-weight: 400;
-  color: var(--color-royal);
+  color: var(--color-steel);
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
