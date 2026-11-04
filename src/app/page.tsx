@@ -50,9 +50,21 @@ export default function HomePage() {
               className="heading-xl mt-5 text-white"
               style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
             >
-              {site.brand.name.split(" ")[0]}{" "}
-              <span className="text-white">
-                {site.brand.name.split(" ").slice(1).join(" ")}
+              <span className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-6">
+                <Image
+                  src="/images/logo.png"
+                  alt={`${site.brand.name} logo`}
+                  width={128}
+                  height={128}
+                  priority
+                  className="h-14 w-14 object-contain sm:h-20 sm:w-20 lg:h-24 lg:w-24"
+                />
+                <span>
+                  {site.brand.name.split(" ")[0]}{" "}
+                  <span className="text-white">
+                    {site.brand.name.split(" ").slice(1).join(" ")}
+                  </span>
+                </span>
               </span>
             </h1>
             <p
