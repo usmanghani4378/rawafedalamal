@@ -31,6 +31,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip; /* never allow sideways scroll on any screen */
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-mist);
@@ -384,6 +389,24 @@ nav a {
   }
   .marquee-track {
     animation: none;
+  }
+}
+
+/* ---------- Mobile stability: calmer motion, zero jitter ---------- */
+@media (max-width: 640px) {
+  /* freeze the hero zoom on phones (address-bar collapse + zoom = wobble) */
+  .hero-zoom {
+    animation: none;
+    transform: scale(1.08); /* still overfills, no gaps */
+  }
+  /* reveals become a simple, still fade — no elements gliding around */
+  .reveal {
+    transform: none;
+    transition: opacity 0.4s ease-out;
+  }
+  /* slow the marquee strip down on small screens */
+  .marquee-track {
+    animation-duration: 50s;
   }
 }
 

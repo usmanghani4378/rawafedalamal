@@ -6,7 +6,6 @@ import {
   BadgeCheck,
   CheckCircle2,
   ChevronDown,
-  Mail,
   MapPin,
   Phone,
   Quote,
@@ -28,7 +27,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══════════ 1) HERO — bright wallpaper under a full-bleed frost ═══════════ */}
-      <section className="relative flex min-h-[78vh] items-start justify-center overflow-hidden md:min-h-[88vh]">
+      <section className="relative flex min-h-[78dvh] items-start justify-center overflow-hidden md:min-h-[88dvh]">
         <Image
           src={site.images.hero}
           alt="Rawafed Alamal scrap metal yard in Dubai"
@@ -43,9 +42,6 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-transparent to-navy/90" />
         <div className="relative mx-auto w-full max-w-4xl px-4 pb-28 pt-24 text-center sm:px-6 sm:pt-28 md:pt-32">
           <div className="fade-up">
-            <p className="kicker kicker--center justify-center">
-              {site.brand.tagline}
-            </p>
             <h1
               className="heading-xl mt-5 text-white"
               style={{ fontSize: "clamp(2.7rem, 10vw, 6.5rem)" }}
@@ -77,36 +73,8 @@ export default function HomePage() {
               <Link href="/contact" className="btn btn-primary">
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href={`tel:${site.contact.phoneHref}`}
-                className="btn btn-outline-light hidden sm:inline-flex"
-              >
+              <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light">
                 <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
-              </a>
-            </div>
-            {/* phone + email — always visible, extra prominent on mobile */}
-            <div className="mt-6 flex flex-col items-center justify-center gap-2.5 sm:flex-row sm:gap-4">
-              <a
-                href={`tel:${site.contact.phoneHref}`}
-                className="inline-flex items-center gap-2.5 text-xl font-bold tracking-wide text-white sm:text-2xl"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
-                  <Phone className="h-5 w-5 text-white" />
-                </span>
-                {site.contact.phoneDisplay}
-              </a>
-              <span
-                className="hidden h-5 w-px bg-white/40 sm:inline-block"
-                aria-hidden="true"
-              />
-              <a
-                href={`mailto:${site.contact.email}`}
-                className="inline-flex items-center gap-2.5 break-all text-base font-bold text-white sm:text-lg"
-              >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15">
-                  <Mail className="h-5 w-5 text-white" />
-                </span>
-                {site.contact.email}
               </a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2.5">
