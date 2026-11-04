@@ -26,17 +26,17 @@ export const site = {
   --------------------------------------------------------------- */
   contact: {
     // Main landline (from trade license records)
-    phoneDisplay: "+971 4 331 1111", // how the number appears on screen
-    phoneHref: "+97143311111", // same number, digits only with country code
+    phoneDisplay: "+971 50 504 9421", // how the number appears on screen
+    phoneHref: "+971505049421", // same number, digits only with country code
 
     // WhatsApp click-to-chat (the green button).
     // ⚠️ ADD THE COMPANY WHATSAPP NUMBER HERE, e.g. "971501234567"
     // (country code first, digits only, NO "+", NO spaces).
     // While this is empty "" the WhatsApp buttons are hidden automatically
     // and the quote form falls back to email.
-    whatsapp: "",
+    whatsapp: "971505049421",
 
-    email: "biz.management360@gmail.com",
+    email: "mamjedhabib@gmail.com",
 
     // Registered office address (shown in footer + contact page)
     addressLines: [
