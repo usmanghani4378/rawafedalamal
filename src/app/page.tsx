@@ -6,6 +6,7 @@ import {
   BadgeCheck,
   CheckCircle2,
   ChevronDown,
+  Mail,
   MapPin,
   Phone,
   Quote,
@@ -75,6 +76,13 @@ export default function HomePage() {
               </Link>
               <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light">
                 <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
+              </a>
+              <a
+                href={`mailto:${site.contact.email}`}
+                className="btn btn-outline-light"
+              >
+                <Mail className="h-4 w-4" />
+                <span className="break-all">{site.contact.email}</span>
               </a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2.5">
