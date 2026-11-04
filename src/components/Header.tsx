@@ -74,12 +74,6 @@ export default function Header() {
               </span>
               {site.contact.phoneDisplay}
             </a>
-            <Link
-              href="/contact"
-              className="btn btn-primary hidden whitespace-nowrap !px-4 !py-2.5 text-sm lg:inline-flex"
-            >
-              Get a Quote
-            </Link>
             {/* mobile hamburger */}
             <button
               onClick={() => setOpen(!open)}
