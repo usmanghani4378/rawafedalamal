@@ -6,6 +6,7 @@ import {
   BadgeCheck,
   CheckCircle2,
   ChevronDown,
+  Mail,
   MapPin,
   Phone,
   Quote,
@@ -64,8 +65,36 @@ export default function HomePage() {
               <Link href="/contact" className="btn btn-primary">
                 Get a Free Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href={`tel:${site.contact.phoneHref}`} className="btn btn-outline-light">
+              <a
+                href={`tel:${site.contact.phoneHref}`}
+                className="btn btn-outline-light hidden sm:inline-flex"
+              >
                 <Phone className="h-4 w-4" /> {site.contact.phoneDisplay}
+              </a>
+            </div>
+            {/* phone + email — always visible, extra prominent on mobile */}
+            <div className="mt-6 flex flex-col items-center justify-center gap-2.5 sm:flex-row sm:gap-4">
+              <a
+                href={`tel:${site.contact.phoneHref}`}
+                className="inline-flex items-center gap-2.5 text-xl font-bold tracking-wide text-white sm:text-2xl"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
+                  <Phone className="h-5 w-5 text-white" />
+                </span>
+                {site.contact.phoneDisplay}
+              </a>
+              <span
+                className="hidden h-5 w-px bg-white/40 sm:inline-block"
+                aria-hidden="true"
+              />
+              <a
+                href={`mailto:${site.contact.email}`}
+                className="inline-flex items-center gap-2.5 break-all text-base font-bold text-white sm:text-lg"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15">
+                  <Mail className="h-5 w-5 text-white" />
+                </span>
+                {site.contact.email}
               </a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2.5">
